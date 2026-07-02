@@ -1,0 +1,148 @@
+# gate-twin master parameter file.
+# RULE (see CLAUDE.md honesty norms): every leaf parameter is a mapping with
+#   value / units / provenance.  Provenance is MANDATORY and is enforced by
+#   tests/test_params.py.  Tags used in provenance:
+#     [PATENT]     U.S. Patent 12,409,695 B2 (granted 2025-09-09)
+#     [MEASURED]   measured data supplied to AKS (e.g. alternator bench curve)
+#     [LITERATURE] peer-reviewed / standard source, cited
+#     [ASSUMPTION] engineering estimate — a design variable or placeholder,
+#                  must be swept in sensitivity analysis, never load-bearing
+#                  for a validation gate.
+
+meta:
+  name: gate-twin baseline (single-corner, F-150-class quarter car)
+  version: 0.1.0
+  date: "2026-07-02"
+
+suspension:
+  m_s:
+    value: 560.0
+    units: kg
+    provenance: "[ASSUMPTION] F-150-class quarter-car sprung mass: ~2500 kg curb / 4 corners minus unsprung. Swept per-vehicle in predictions."
+  m_u:
+    value: 65.0
+    units: kg
+    provenance: "[LITERATURE] typical light-truck corner unsprung mass 50-80 kg (wheel+tire+axle share), e.g. Gillespie, Fundamentals of Vehicle Dynamics, ch.5."
+  k_s:
+    value: 32000.0
+    units: N/m
+    provenance: "[LITERATURE] chosen so sprung (body) mode = sqrt(k_s/m_s)/2pi ~ 1.2 Hz, the 1-1.5 Hz passenger/truck range (Gillespie ch.5)."
+  c_s:
+    value: 2900.0
+    units: N.s/m
+    provenance: "[LITERATURE] damping ratio ~0.35 of critical on sprung mode, typical OEM tune (zeta = c/(2*sqrt(k_s*m_s)))."
+  k_t:
+    value: 250000.0
+    units: N/m
+    provenance: "[LITERATURE] light-truck radial tire vertical rate ~200-300 kN/m; gives wheel-hop mode ~10.5 Hz."
+
+gate:
+  m_f:
+    value: 8.0
+    units: kg
+    provenance: "[ASSUMPTION] middle-plate + drive-shaft translating mass of the 3-plate frame; design variable."
+  k_b_over_k_s:
+    value: 0.30
+    units: "-"
+    provenance: "[PATENT] Claims 2/11: frame biasing spring rate LOWER than main suspension spring. Ratio is a design variable; 0.3 places soft-stage-first behavior with 2-5 in usable stroke."
+  c_b:
+    value: 100.0
+    units: N.s/m
+    provenance: "[ASSUMPTION] parasitic friction/guide damping of frame stage; small vs main damper."
+  x_b_max:
+    value: 0.0635
+    units: m
+    provenance: "[PATENT] frame stroke 2-5 in before main-spring engagement; 2.5 in = 0.0635 m each way used as symmetric travel about static equilibrium."
+  k_stop:
+    value: 2000000.0
+    units: N/m
+    provenance: "[ASSUMPTION] elastomeric hard-stop stiffness at frame travel limit."
+  c_stop:
+    value: 8000.0
+    units: N.s/m
+    provenance: "[ASSUMPTION] hard-stop loss (bump-rubber hysteresis equivalent)."
+  lead:
+    value: 0.0254
+    units: m/rev
+    provenance: "[PATENT] screw lead ~= 1 in/rev."
+  n_step:
+    value: 6.0
+    units: "-"
+    provenance: "[PATENT] internal step-up 5-8:1; midpoint 6 as baseline, swept in sensitivity."
+  J:
+    value: 0.0003
+    units: kg.m^2
+    provenance: "[ASSUMPTION] flywheel+rotor inertia at generator shaft. NOTE: reflected inertance J*(2pi*N/lead)^2 ~ 660 kg — dominant, physical for MMR devices (cf. Li & Zuo 2013). Key design variable."
+  c_w:
+    value: 0.00005
+    units: N.m.s/rad
+    provenance: "[ASSUMPTION] rotor windage/bearing viscous drag; gives free spin-down tau = J/c_w = 6 s."
+  c_od:
+    value: 0.0002
+    units: N.m.s/rad
+    provenance: "[LITERATURE-ANCHORED ASSUMPTION] sprag overrunning drag, viscous equivalent sized to ~0.1 N.m at ~500 rad/s operating slip, matching sprag catalog drag torques of 0.05-0.5 N.m (e.g. Formsprag/GMN freewheel data). First guess 0.005 gave an unphysical 3.5 N.m — see LAB_NOTEBOOK 2026-07-02."
+  sprag_liftoff_rpm:
+    value: 1200.0
+    units: rpm
+    provenance: "[LITERATURE] sprag centrifugal lift-off ceiling 800-1500 rpm on the inner race (sprag catalog data); midpoint used as design-check threshold."
+
+generator:
+  pm:
+    k_e:
+      value: 0.05
+      units: V.s/rad
+      provenance: "[ASSUMPTION] PM machine EMF constant sized for ~150-300 W at 2000-4000 rpm; design variable."
+    R_int:
+      value: 0.4
+      units: ohm
+      provenance: "[ASSUMPTION] winding resistance chosen so peak electrical efficiency R_L/(R_L+R_int) ~ 85-90% at design load, matching brief's PM spec."
+    R_load:
+      value: 1.0
+      units: ohm
+      provenance: "[ASSUMPTION] electrical load resistance — the impedance-matching knob, swept in sensitivity."
+  alternator:
+    v_bus:
+      value: 14.0
+      units: V
+      provenance: "[MEASURED] alternator curve quoted at 14 V bus (AKS/WAI data in brief)."
+    cutin_rpm:
+      value: 1600.0
+      units: rpm
+      provenance: "[MEASURED] claw-pole cut-in speed from supplied curve."
+    curve_rpm:
+      value: [1600.0, 2000.0, 2500.0, 3500.0, 6000.0]
+      units: rpm
+      provenance: "[MEASURED] AKS/WAI alternator bench curve abscissa."
+    curve_amps:
+      value: [77.0, 100.0, 117.0, 138.0, 152.0]
+      units: A
+      provenance: "[MEASURED] AKS/WAI alternator bench curve output current at 14 V."
+    efficiency:
+      value: 0.52
+      units: "-"
+      provenance: "[MEASURED] claw-pole alternator ~50-55% efficiency (brief; consistent with published claw-pole maps, e.g. Hagstedt et al. 2013)."
+
+roads:
+  # ISO 8608:2016 displacement PSD  Gd(n) = Gd0 * (n/n0)^-2,  n0 = 0.1 cycles/m.
+  # Gd0 values are class geometric centers, units 1e-6 m^3 -> written in m^3.
+  iso8608_Gd0:
+    A:
+      value: 16.0e-6
+      units: m^3
+      provenance: "[LITERATURE] ISO 8608:2016 Table B.1, class A geometric center."
+    B:
+      value: 64.0e-6
+      units: m^3
+      provenance: "[LITERATURE] ISO 8608:2016 Table B.1, class B geometric center."
+    C:
+      value: 256.0e-6
+      units: m^3
+      provenance: "[LITERATURE] ISO 8608:2016 Table B.1, class C geometric center."
+    D:
+      value: 1024.0e-6
+      units: m^3
+      provenance: "[LITERATURE] ISO 8608:2016 Table B.1, class D geometric center."
+    E:
+      value: 4096.0e-6
+      units: m^3
+      provenance: "[LITERATURE] ISO 8608:2016 Table B.1, class E geometric center."
