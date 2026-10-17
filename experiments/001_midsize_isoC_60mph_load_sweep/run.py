@@ -29,6 +29,14 @@ def cases():
                     cs.append({**base, "seed": seed, "tag": "gate",
                                "gate": {"c_gen": cg, "r": r, "J": J, "k_b_over_k_m": CFG["k_b_over_k_m"],
                                         "travel": CFG["travel_m"]}})
+        for r, J in CFG.get("c_s_scale_configs", []):
+            for sc in CFG.get("c_s_scale", []):
+                if sc == 1.0:
+                    continue
+                for cg in CFG["c_gen"]:
+                    cs.append({**base, "seed": seed, "tag": "gate", "c_s_scale": sc,
+                               "gate": {"c_gen": cg, "r": r, "J": J, "k_b_over_k_m": CFG["k_b_over_k_m"],
+                                        "travel": CFG["travel_m"]}})
     return cs
 
 
@@ -41,7 +49,10 @@ def analyse(df: pd.DataFrame):
         g[new] = g[col].values - pas.loc[g["seed"], col].values
         g[new + "_pct"] = 100 * g[new] / pas.loc[g["seed"], col].values
     g["Jr"] = g["gate_J"] * g["gate_r"] ** 2
-    g["config"] = g.apply(lambda r: f"r={r.gate_r:.0f}, J={r.gate_J:.0e} (Jr={r.Jr:.0f} kg)", axis=1)
+    if "c_s_scale" not in g:
+        g["c_s_scale"] = 1.0
+    g["c_s_scale"] = g["c_s_scale"].fillna(1.0)
+    g["config"] = g.apply(lambda r: f"r={r.gate_r:.0f}, J={r.gate_J:.0e} (Jr={r.Jr:.0f} kg), damper x{r.c_s_scale:g}", axis=1)
     c, gm = corner(CFG["vehicle"])
     exact = mean_road_power(c, CFG["klass"], CFG["speed_mps"])
     fig, axs = plt.subplots(2, 3, figsize=(13, 7))

@@ -7,6 +7,7 @@ re-run.  Keys:
   gate: None (passive baseline) or {overrides...} for gate_from_yaml
   m_f: moving plate mass (kg)           damper_span: "full" | "main"
   delta_m: added hardware mass (kg)     tag: free text
+  c_s_scale: OEM damper scale on the Gate corner (baseline keeps 1.0)
 """
 
 from __future__ import annotations
@@ -49,6 +50,10 @@ def run_case(case: dict) -> dict:
             row["is_gate"] = False
         else:
             g = gate_from_yaml(c.k_m, case["gate"])
+            cs_scale = float(case.get("c_s_scale", 1.0))
+            if cs_scale != 1.0:   # the Gate corner may carry a smaller OEM damper; the baseline keeps stock
+                from dataclasses import replace
+                c = replace(c, c_s=c.c_s * cs_scale)
             res = QuarterCarGate(c, g, road, m_f=case.get("m_f", 8.0),
                                  damper_span=case.get("damper_span", "full")).simulate(case["duration"])
             row["is_gate"] = True

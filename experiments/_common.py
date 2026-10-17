@@ -42,6 +42,9 @@ def attach_deltas(df: pd.DataFrame, keys=("vehicle", "klass", "speed", "seed")) 
         g[new + "_pct"] = 100 * g[new] / ref
     g["P_damper_passive"] = pas.loc[idx, "P_damper"].values
     g["Jr"] = g["gate_J"] * g["gate_r"] ** 2
+    if "c_s_scale" not in g:
+        g["c_s_scale"] = 1.0
+    g["c_s_scale"] = g["c_s_scale"].fillna(1.0)
     g["P_supply_exact"] = [mean_road_power(corner(v)[0], k, s)["P_road"]
                            for v, k, s in zip(g["vehicle"], g["klass"], g["speed"])]
     return g
@@ -65,4 +68,4 @@ STD_FMT = {"P_supply": "{:.0f}", "P_road": "{:.0f}", "P_elec": "{:.1f}", "P_elec
            "phi": "{:.3f}", "P_net": "{:.1f}", "eta_mech": "{:.2f}", "damper_share": "{:.2f}",
            "d_a_w_pct": "{:+.1f}", "d_dtl_pct": "{:+.1f}", "t_stop": "{:.2f}", "N_stop_km": "{:.0f}",
            "x_b_rms": "{:.4f}", "rpm": "{:.0f}", "rpm_p95": "{:.0f}", "T_c_p99": "{:.2f}", "N_eng_km": "{:.0f}",
-           "kappa": "{:.3f}", "closure": "{:.1e}", "speed": "{:.1f}", "c_gen": "{:.4g}"}
+           "kappa": "{:.3f}", "closure": "{:.1e}", "speed": "{:.1f}", "c_gen": "{:.4g}", "c_s_scale": "{:g}"}

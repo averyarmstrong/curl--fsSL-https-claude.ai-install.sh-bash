@@ -64,3 +64,84 @@ V2: configure single-corner rectifier at 0.047 m/s RMS suspension velocity,
 reproduce Zuo MMR ≈40 W/unit and >60% mechanical efficiency within ±25%.
 Pull the actual Li/Zuo 2013 numbers via web search and cite precisely
 (power level, device kinematics, test conditions) before running anything.
+
+---
+
+## 2026-10-17 — Session 2: gate-twin → aks-lab, the road-power theorem, first sweeps
+
+**Goal.** Execute the AKS Lab kickoff brief: intake every prior AKS
+document, derive the physics by hand, rebuild the package as `aks_lab`,
+validate against closed forms and the Zuo baseline, run experiments
+001–006, write prior art / claims audit / bench protocol / findings.
+
+### What was tried, what failed, why
+
+1. **Website fetch failed** (DNS not resolvable through the proxy). Used the
+   114-page Website Blueprint from Drive as the tone of record instead.
+2. **Several brief-named inputs do not exist** in Drive or the uploads:
+   `aks_quarter_car_v0.py`, `AKS_ClaudeCode_Prompt_DigitalTwin.md`,
+   `AKS_Armstrong_Gate_Simulation.html`, `Housing plate 1/2.pdf`, Larry's
+   drawing JPEGs, and the "14 W measured" record. Logged in 00_intake and F4.
+3. **The fixed-body road-power derivation was wrong.** I first wrote
+   P̄ = W_v k_t²/(4(k_t+k_eff)); the exact Lyapunov evaluation returned
+   W_v k_t/4 for *every* parameter set including m_s → ∞. Cause: a body
+   fixed in absolute space under a Brownian road is non-stationary (the
+   main spring stretches without bound), so the 1-DOF limit is singular.
+   The correct statement is the stronger one — P̄ = ¼ k_t W_v, independent
+   of everything above the tire, nonlinear corners included — and it is now
+   proved in 01_physics §7 and tested both ways. The failed test is kept as
+   `test_fixed_body_formula_is_not_the_limit` so the pitfall is documented.
+4. **ISO 2631 W_k came out exactly 2× high.** The upward-step stage was
+   written with an (ω₆/ω₅)² normalisation that the standard's tabulated
+   weights contradict (W_k → 1 above ~4 Hz, ≈ 0.48 at 1 Hz). Removed; all
+   seven tabulated points now match within 5%.
+5. **Bench-rig ledger failed to close with backlash.** The lock-up impulse
+   J·Δω is reacted by the kinematic actuator at race speed and does work
+   J·Δω·ω_race that the integrated F·ẋ cannot see. Booked at the event;
+   closure returned to 1e-9.
+6. **Slip mode went negative in the clutch ledger.** The "relock" exit from
+   slip let the rotor overtake the race while still transmitting T_cap. A
+   one-way clutch cannot do that: slip now exits to FREE when the race falls
+   behind, and re-engagement goes through the normal engage event. Closure
+   exact.
+7. **Vehicle provenance correction.** I had labelled the mid-size-car
+   parameter set as "Zuo & Zhang 2013 Table 1" from memory; the prior-art
+   dossier confirms the paper's table was not retrievable here. Relabelled
+   as literature-typical values with the derivation shown. The validation
+   (b) band (122–488 W per car, B–C) is therefore our own reproduction of
+   the scaling, not a check against their exact parameters.
+8. **gate-twin's V2 anchor was mis-cited.** "40 W @ 0.047 m/s RMS" mixed the
+   1.5 Hz × 5 mm efficiency condition (peak 0.047 m/s) with the 3 Hz × 5 mm
+   power condition (40.4 W). Withdrawn; 04_prior_art item 1.
+
+### Decisions
+
+- Gate element keeps the exact-constraint hybrid formulation; engagement
+  impact (backlash), torque-capacity slip, asymmetric stops added. The
+  element exposes forces/coupling/events; the host assembles the mass
+  matrix. Documented interface in `elements/gate.py`.
+- Transmission is one parameter r [rad/m]; the screw+step-up reading is a
+  derived convenience.
+- Damper span `full` (OEM shock bridging the Gate) is the default retrofit
+  topology; `main` is kept and swept.
+- ΔP_ride stays `None` with the ride metric beside it; no exchange rate is
+  invented.
+
+### Results so far (details in experiment READMEs)
+
+- Validation (a): transmissibility < 1% at 0.7/1.1/3/11 Hz. (b): 30 /
+  122 / 488 / 1952 W per car for A/B/C/D at 60 mph. (c): hand derivation to
+  0.5%. Ledger closure 1e-6–1e-9 on every path.
+- F1–F4 written before any sweep completed (08_findings).
+- Smoke run: at r = 1484, J = 3e-4 the frame strokes 3.7 mm RMS and yields
+  3 W; at r = 300, J = 3e-5, 10 mm and 11 W at c_gen 0.01 (ISO C, 60 mph,
+  mid-size car). Reflected inertance is the first-order design variable.
+
+### Ugly things to keep in view
+
+- Per-sim cost ~0.5 s per simulated second on one core; sweeps are hours,
+  not minutes. Numba or a compiled RHS is the next performance step.
+- Bench `c_eq_fit` (99 N·s/m) differs from c_gen r² (45 N·s/m) when J > 0
+  because the fit absorbs inertance and partial engagement — the bench
+  comparison must run the model with the measured J, not read c_gen off the
+  fit.

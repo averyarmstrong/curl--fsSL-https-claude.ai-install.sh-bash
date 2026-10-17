@@ -16,3 +16,8 @@ k_b_over_k_m: 0.1198      # prototype ratio 1/8.35
 travel_m: 0.1016          # 4 in, centred
 damper_span: full
 m_f_kg: 8.0
+# Added after the first pass (results/RESULTS.md, 02:48): with the stock damper
+# the Gate takes <10% of the supply. Second axis: scale the OEM damper on the
+# Gate corner (the passive comparator keeps the stock damper).
+c_s_scale: [1.0, 0.5, 0.25, 0.1]
+c_s_scale_configs: [[300.0, 0.00003], [300.0, 0.0003]]   # (r, J) pairs for the damper axis
