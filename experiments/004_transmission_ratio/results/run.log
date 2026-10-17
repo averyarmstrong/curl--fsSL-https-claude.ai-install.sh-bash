@@ -1,0 +1,4 @@
+2026-10-17 03:26:53,842 INFO sweep: 129 cases (129 to run) on 4 workers
+2026-10-17 03:27:18,695 INFO 8/129 done, 0 errors, 25 s elapsed, ~376 s left
+2026-10-17 03:27:33,730 INFO 16/129 done, 0 errors, 40 s elapsed, ~282 s left
+2026-10-17 03:27:50,507 INFO 24/129 done, 0 errors, 57 s elapsed, ~248 s left

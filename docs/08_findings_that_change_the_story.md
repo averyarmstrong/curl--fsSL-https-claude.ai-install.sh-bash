@@ -168,6 +168,13 @@ freewheeling and partial engagement and can only come in at or below these
 numbers; experiment 001 at the surrogate's load point gives 9.7 W vs the
 surrogate's 10.6 W.
 
+**Nonlinear confirmation (experiment 002, 504 runs).** φ with the stock
+damper: 0.08 (car), 0.09 (F-150), 0.11 (HMMWV) on every class and speed;
+P_net at 60 mph on ISO C: −21 / −23 / −18 W; positive only on ISO D (−3 /
++3 / +48 W) or, for the HMMWV, with the damper cut to 25 % (+8 W on C,
++114 W on D, with tire load +34 % and the frame on a stop 12 % of the
+time). Full table in `experiments/002_roads_speeds_vehicles/README.md`.
+
 **How sure.** Exact for the linear model; the model's assumptions (small
 motion, no stops, white road velocity, point-contact tire) all err on the
 generous side. The tire-load constraint threshold (10%) is a choice;

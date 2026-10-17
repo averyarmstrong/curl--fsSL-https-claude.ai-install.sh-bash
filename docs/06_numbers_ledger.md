@@ -30,3 +30,8 @@ experiment's `results/RESULTS.md` for the full tables.)*
 | 0.11 / 0.17 / 0.21 / 0.25 / 0.39 | φ (constrained ceiling) | exact (surrogate) | same vehicles | modeled | same | 2026-10-17 |
 | 300–500 | N·s/m | — | optimal reflected generator damping c_gen·r², passenger car, any bias ratio 0.05–1 | modeled | same | 2026-10-17 |
 | 9.7 (9.5–9.9) | W per corner | 3 seeds | nonlinear sim, midsize, ISO C 60 mph, r 300, J 3e-5, c_gen 0.01, stock damper | modeled | exp 001 | 2026-10-17 |
+| 9.7 / 14.8 / 29.3 | W per corner | seed range ±3 % | ISO C 60 mph, stock damper, best load: midsize / F-150 / HMMWV | modeled | exp 002 | 2026-10-17 |
+| 38.7 / 59 / 117 | W per corner | ±3 % | ISO D 60 mph, stock damper | modeled | exp 002 | 2026-10-17 |
+| 19.5 / 34.8 / 79.5 | W per corner | ±3 % | ISO C 60 mph, OEM damper ×0.25 (DTL +26–53 %) | modeled | exp 002 | 2026-10-17 |
+| 0.08 / 0.09 / 0.11 | φ | — | stock damper, any class A–D, 30 or 60 mph: midsize / F-150 / HMMWV | modeled | exp 002 | 2026-10-17 |
+| −21 / −23 / −18 | W net per corner | — | ISO C 60 mph stock damper incl. 10/12/15 kg mass penalty | modeled | exp 002 | 2026-10-17 |
