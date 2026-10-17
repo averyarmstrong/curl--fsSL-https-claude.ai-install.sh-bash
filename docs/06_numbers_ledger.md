@@ -51,3 +51,7 @@ experiment's `results/RESULTS.md` for the full tables.)*
 | −0.64 / −0.45 / +0.35 | Spearman ρ with P_elec | — | guide friction / overrun drag / generator efficiency (midsize) | modeled | exp 007 | 2026-10-17 |
 | 125 / 159 / 176 ; 475 / 624 / 703 | W per dual station | 5–95 % | Class 8 loaded ISO C ; D, 60 mph, damper ×0.75, open params drawn | modeled | exp 007 (corrected load range) | 2026-10-17 |
 | −16 / +36 / +85 ; +204 / +368 / +503 | W net per station | 5–95 % | same, incl. 15–45 kg hardware | modeled | exp 007 | 2026-10-17 |
+| 0.23 / 2.3 ; 0.00 | W per corner | median 2 seeds | body-force channel power: gust 25 / 100 N RMS 0.2–3 Hz ; powertrain 100 N 20–40 Hz, midsize ISO C 60 mph | modeled | exp 008 | 2026-10-17 |
+| +0.05 / +0.54 | W per corner | — | Gate output change from those gust loads | modeled | exp 008 | 2026-10-17 |
+| −1 % / −12 % | of road supply | — | one-sided tire (lift-off) ISO D / E, midsize 60 mph; 0 on A–C | modeled | exp 008 | 2026-10-17 |
+| 1e-6 | relative | — | full-gravity vs perturbation model trajectory difference | modeled (test) | test_gravity_body_force_liftoff | 2026-10-17 |

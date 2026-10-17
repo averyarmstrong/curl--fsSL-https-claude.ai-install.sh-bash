@@ -1,1 +1,27 @@
 2026-10-17 11:18:33,521 INFO sweep: 200 cases (200 to run) on 4 workers
+2026-10-17 11:19:14,161 INFO 8/200 done, 0 errors, 41 s elapsed, ~975 s left
+2026-10-17 11:19:49,273 INFO 16/200 done, 0 errors, 76 s elapsed, ~871 s left
+2026-10-17 11:20:26,769 INFO 24/200 done, 0 errors, 113 s elapsed, ~830 s left
+2026-10-17 11:20:59,853 INFO 32/200 done, 0 errors, 146 s elapsed, ~768 s left
+2026-10-17 11:21:45,836 INFO 40/200 done, 0 errors, 192 s elapsed, ~769 s left
+2026-10-17 11:22:31,708 INFO 48/200 done, 0 errors, 238 s elapsed, ~754 s left
+2026-10-17 11:23:15,699 INFO 56/200 done, 0 errors, 282 s elapsed, ~726 s left
+2026-10-17 11:23:56,022 INFO 64/200 done, 0 errors, 323 s elapsed, ~685 s left
+2026-10-17 11:24:47,097 INFO 72/200 done, 0 errors, 374 s elapsed, ~664 s left
+2026-10-17 11:25:39,107 INFO 80/200 done, 0 errors, 426 s elapsed, ~638 s left
+2026-10-17 11:26:39,832 INFO 88/200 done, 0 errors, 486 s elapsed, ~619 s left
+2026-10-17 11:27:22,011 INFO 96/200 done, 0 errors, 528 s elapsed, ~573 s left
+2026-10-17 11:28:06,628 INFO 104/200 done, 0 errors, 573 s elapsed, ~529 s left
+2026-10-17 11:28:34,760 INFO 112/200 done, 0 errors, 601 s elapsed, ~472 s left
+2026-10-17 11:29:10,743 INFO 120/200 done, 0 errors, 637 s elapsed, ~425 s left
+2026-10-17 11:29:50,759 INFO 128/200 done, 0 errors, 677 s elapsed, ~381 s left
+2026-10-17 11:30:24,953 INFO 136/200 done, 0 errors, 711 s elapsed, ~335 s left
+2026-10-17 11:31:02,835 INFO 144/200 done, 0 errors, 749 s elapsed, ~291 s left
+2026-10-17 11:31:41,645 INFO 152/200 done, 0 errors, 788 s elapsed, ~249 s left
+2026-10-17 11:32:25,218 INFO 160/200 done, 0 errors, 832 s elapsed, ~208 s left
+2026-10-17 11:33:15,879 INFO 168/200 done, 0 errors, 882 s elapsed, ~168 s left
+2026-10-17 11:33:54,310 INFO 176/200 done, 0 errors, 921 s elapsed, ~126 s left
+2026-10-17 11:34:41,162 INFO 184/200 done, 0 errors, 968 s elapsed, ~84 s left
+2026-10-17 11:35:26,778 INFO 192/200 done, 0 errors, 1013 s elapsed, ~42 s left
+2026-10-17 11:36:33,372 INFO 200/200 done, 0 errors, 1080 s elapsed, ~0 s left
+2026-10-17 11:36:33,422 INFO sweep finished: 200 rows, 0 errors, 1080 s

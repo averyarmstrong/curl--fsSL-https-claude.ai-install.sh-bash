@@ -277,4 +277,36 @@ is not.
 
 ---
 
-*(Entries F8+ are appended as the experiments complete.)*
+## F8. Gravity, weight, wind, hop: checked, booked, small
+
+**The objection.** "The road sets the watts" leaves out gravity, the
+vehicle's weight and torque, heave and pitch, tire deformation, wheels
+leaving the ground, and wind.
+
+**What the repo finds (experiment 008; `tests/test_gravity_body_force_liftoff.py`).**
+- *Gravity / weight.* A model in absolute coordinates with g, free lengths
+  and preloads reproduces the perturbation model to 10⁻⁶. Static weight
+  does no net work; a 4× heavier corner at matched ride tune dissipates
+  *less* energy on the same bump (153 → 108 J). Weight raises harvest only
+  through the stiffer tires heavy vehicles run.
+- *Tire deformation* is k_t — the quantity the theorem is built on.
+- *Wheel lift-off* (one-sided tire) leaves A–C unchanged, removes 1 % of
+  the road supply on D and 12–16 % on E. An open contact passes no power.
+- *Wind* is a separate channel, now carried in the ledger as `E_body`:
+  100 N RMS per corner of 0.2–3 Hz gust load (≈ 400 N per vehicle, a strong
+  crosswind) delivers ~2 W per corner and adds ~0.5 W of output; realistic
+  levels give 0.1–0.2 W. *Powertrain vibration* (20–40 Hz) delivers zero
+  to the suspension.
+- *Drive torque, braking, cornering* are load-transfer transients: ~1 kN
+  × 3 cm ≈ 30 J per event, well under 1 W in city driving. A half-car
+  model will carry them; they do not change the order of magnitude.
+
+**How sure.** Exact for gravity (identity); modeled with generous forcing
+levels for wind; lift-off is a strict reduction by construction.
+
+**What to say instead.** Nothing changes from F1/F5/F7: the road through
+the tire is the source; everything else is percent-level or negative.
+
+---
+
+*(Entries F9+ are appended as the experiments complete.)*

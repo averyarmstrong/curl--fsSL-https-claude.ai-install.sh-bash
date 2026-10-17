@@ -274,6 +274,20 @@ P_road = F_t ż_r = k_t (z_r − z_u) ż_r   (+ c_t ṙ_t ż_r if tire damping) 
 
 ---
 
+### 5b. Other input channels and contact loss
+
+Forces applied directly to the body or axle (aerodynamic buffeting,
+powertrain vibration, payload motion) are a second input, independent of
+the road: `F_body(t)` on m_s, booked as `E_body = ∫F_body ż_s dt` on the
+input side of the ledger. The theorem of §7 says nothing about them; they
+add linearly. `roads/body_force.py` synthesises band-limited white forcing;
+experiment 008 sizes the channel (percent-level at the extreme, zero above
+the body modes). A **one-sided tire** (`CornerParams.tire_oneside`) clamps
+the perturbation tire force at −W_static when the total force would go
+negative; its potential is the C¹ continuation ½k_t r₀² − W(r_t − r₀) so
+the ledger stays exact. Lift-off can only reduce the road supply (no power
+through an open contact).
+
 ## 6. Energy ledger (hard gate on every run)
 
 All work and loss integrals are ODE states, so closure is limited only by

@@ -189,3 +189,17 @@ validate against closed forms and the Zuo baseline, run experiments
   heat, not suspension budget. Ledger note: the passive model books tire
   loss under E_genloss (no machine present) — rename to E_tire if c_t is
   ever used in a sweep; all experiments ran c_t = 0.
+
+## 2026-10-17 — Session 3: gravity / wind / lift-off objection
+
+Avery's objection: the theorem ignores gravity, weight, torque, heave,
+tire deformation, tires jumping, wind. Turned each into a test or a run
+(exp 008, F8). Two bugs of mine on the way, both caught by the tests: the
+full-gravity comparison model omitted the spring preload (body sank 25 cm —
+the check worked), and I first asserted the random-road invariance on a
+deterministic bump where it does not hold (reworded to "not ∝ weight",
+which it is not: 153 → 108 J for 4× mass). The 19th state `E_body` changed
+NSTATE; the numba model and the 1e-4 equivalence test still pass. Reference
+model only for body-force / one-sided cases (~5 s per simulated 40 s).
+Outcome: wind ≤ 2 W per corner at 400 N RMS per vehicle; powertrain 0;
+lift-off −1 % (D) / −12 % (E) of supply; gravity identical to 1e-6.

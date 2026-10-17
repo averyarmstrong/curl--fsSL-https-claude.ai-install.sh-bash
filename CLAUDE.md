@@ -43,6 +43,7 @@ corner on ISO C. Vehicle weight enters only through tire stiffness.
       findings F1–F7, ledger, sizing report, linear frontier, README table
 - [x] Experiment 007 Monte Carlo (1,152 live cases; Class 8 load range
       corrected and re-run), README, bands in F5 and ledger
+- [x] Session 3: body-force channel (E_body), one-sided tire, gravity test, exp 008, F8
 - [ ] Clutch endurance leg T6 and bench data when hardware runs
 - [ ] Half-car (pitch) model; measured-profile ingest from FHWA LTPP
 - [x] numba RHS (3.5×); sweeps default to it
@@ -74,7 +75,9 @@ corner on ISO C. Vehicle weight enters only through tire stiffness.
 - Slip exits to FREE, never "relock" (LAB_NOTEBOOK 6).
 - `c_eq_fit` on the bench ≠ c_gen·r² when J > 0; run the model with the
   measured J.
-- Case worker: `c_s_scale` scales the OEM damper on the Gate corner only.
+- Case worker: `c_s_scale` scales the OEM damper on the Gate corner only;
+  `body_force` / `tire_oneside` force the reference (non-numba) model.
+- NSTATE is 19 (E_body added session 3); the numba model zero-fills it.
 - Mid-size-car parameters are literature-typical, NOT Zuo & Zhang's table
   (not retrievable here).
 
