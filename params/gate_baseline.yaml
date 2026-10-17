@@ -1,0 +1,72 @@
+# Baseline Gate parameters (one unit).  Every leaf is {value, units,
+# provenance}; provenance is mandatory (tests/test_params.py).  Tags:
+#   [PATENT] US 12,409,695 B2   [MEASURED] supplier sheet / test
+#   [LITERATURE] cited          [ESTIMATE] open, see docs/09_open_parameters.md
+# The bias-spring rate is specified as a ratio to the host's main spring so
+# the same file serves every vehicle; experiments override any field.
+
+meta:
+  name: gate baseline v1
+  date: "2026-10-17"
+
+k_b_over_k_m:
+  value: 0.1198
+  units: "-"
+  provenance: "[MEASURED] prototype articles EB-7234/EB-7233: 1.905/15.902 lbf/in = 1/8.35 (Diligence Response Aug 2026). Claims 2/11 require < 1. Swept 0.05-0.67."
+travel:
+  value: 0.1016
+  units: m
+  provenance: "[PATENT] soft-stage stroke 2-5 in (col. 3:20-27); 4 in used as baseline total frame travel. Swept."
+eq_fraction:
+  value: 0.5
+  units: "-"
+  provenance: "[ESTIMATE] equilibrium placed mid-travel by preload; x_c = eq_fraction*travel, x_e = (1-eq_fraction)*travel. Swept 0.3-0.7."
+c_b:
+  value: 100.0
+  units: N.s/m
+  provenance: "[ESTIMATE] guide-bar/sleeve friction, viscous equivalent. Open."
+k_stop:
+  value: 2000000.0
+  units: N/m
+  provenance: "[ESTIMATE] elastomer bump-stop stiffness. Open."
+c_stop:
+  value: 8000.0
+  units: N.s/m
+  provenance: "[ESTIMATE] bump-stop hysteresis equivalent. Open."
+r:
+  value: 1484.0
+  units: rad/m
+  provenance: "[ESTIMATE] 1 in/rev screw x 6:1 step-up = 2 pi 6 / 0.0254. Patent fixes no mechanism; swept 200-4000."
+J:
+  value: 0.0003
+  units: kg.m^2
+  provenance: "[ESTIMATE] rotor + flyweights at the rotor. Reflected inertance J r^2 = 660 kg at baseline r. Swept 3e-5 - 1e-2 (tech brief example 0.01)."
+c_w:
+  value: 0.00005
+  units: N.m.s/rad
+  provenance: "[ESTIMATE] bearing/windage; spin-down tau = J/c_w = 6 s. Open."
+c_od:
+  value: 0.0002
+  units: N.m.s/rad
+  provenance: "[LITERATURE-anchored ESTIMATE] sprag overrun drag ~0.1 N m at 500 rad/s slip; catalog 0.05-0.5 N m (Formsprag/GMN). See LAB_NOTEBOOK 2026-07-02."
+theta_bl:
+  value: 0.0
+  units: rad
+  provenance: "[ESTIMATE] engagement backlash; catalog < 0.5 deg = 0.0087 rad. Baseline 0 (impact-free); swept."
+T_cap:
+  value: .inf
+  units: N.m
+  provenance: "[ESTIMATE] torque capacity not chosen; inf = never slips; exceedance counted in sizing."
+sprag_liftoff_rpm:
+  value: 1200.0
+  units: rpm
+  provenance: "[LITERATURE] sprag centrifugal lift-off 800-1500 rpm inner race (catalog); design check."
+generator:
+  c_gen:
+    value: 0.002
+    units: N.m.s/rad
+    provenance: "[ESTIMATE] linear load T = c_gen w; equals PM k_e = 0.05 V s/rad on R_int+R_load = 1.25 ohm. Swept 1e-4 - 1e-1 (the Q4 knob)."
+  eta:
+    value: 0.85
+    units: "-"
+    provenance: "[LITERATURE] PM machine at matched load 85-92% (tech brief refs; PHINIA map pending)."

@@ -1,27 +1,22 @@
-"""gate-twin: digital twin of the Armstrong Gate (U.S. Patent 12,409,695 B2)."""
+"""aks-lab: computational home of Armstrong Kinetic Solutions.
 
-from .bench import BenchRig, raised_cosine, sine, still
-from .generator import ClawPoleAlternator, NullGenerator, PMGenerator
-from .model import QuarterCarGate, SimResult
-from .params import DEFAULT_PARAMS_PATH, Params, load_params
-from .roads import ISO8608_GD0, RoadProfile, iso8608_profile
+Models ONLY the mechanism of US 12,409,695 B2.  Every number this package
+produces is reproducible from a command and tagged measured / modeled / target.
+"""
 
-__version__ = "0.1.0.dev0"
+from .bench.harness import BenchRig, raised_cosine, sine_stroke, still
+from .elements.gate import Gate, GateParams, linear_gate
+from .elements.generator import ClawPoleAlternator, LinearGenerator, NullGenerator, PMGenerator
+from .params import gate_from_yaml, load_gate_raw
+from .roads import iso8608_profile, white_velocity_level
+from .vehicles import CornerParams, PassiveQuarterCar, QuarterCarGate, SimResult, corner
 
 __all__ = [
-    "BenchRig",
-    "raised_cosine",
-    "sine",
-    "still",
-    "ClawPoleAlternator",
-    "NullGenerator",
-    "PMGenerator",
-    "QuarterCarGate",
-    "SimResult",
-    "Params",
-    "load_params",
-    "DEFAULT_PARAMS_PATH",
-    "RoadProfile",
-    "iso8608_profile",
-    "ISO8608_GD0",
+    "BenchRig", "raised_cosine", "sine_stroke", "still",
+    "Gate", "GateParams", "linear_gate",
+    "ClawPoleAlternator", "LinearGenerator", "NullGenerator", "PMGenerator",
+    "gate_from_yaml", "load_gate_raw",
+    "iso8608_profile", "white_velocity_level",
+    "CornerParams", "PassiveQuarterCar", "QuarterCarGate", "SimResult", "corner",
 ]
+__version__ = "0.2.0.dev0"

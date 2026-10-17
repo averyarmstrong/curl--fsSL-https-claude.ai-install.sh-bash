@@ -87,3 +87,9 @@ def iso8608_profile(
         "provenance": "ISO 8608:2016 Gd(n)=Gd0*(n/n0)^-2, n0=0.1 cycles/m",
     }
     return RoadProfile(t, z, meta=meta)
+
+
+def white_velocity_level(klass: str, speed: float) -> float:
+    """One-sided white ground-velocity PSD level W_v [(m/s)^2/Hz], eq. (5.1) of 01_physics.md."""
+    gd0 = ISO8608_GD0[klass.upper()]
+    return 4.0 * np.pi**2 * gd0 * N0**2 * speed

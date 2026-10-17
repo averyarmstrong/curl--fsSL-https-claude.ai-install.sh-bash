@@ -1,0 +1,84 @@
+# Per-corner vehicle parameter sets (SI). Every value carries a provenance
+# tag: [LITERATURE] cited; [DERIVED] formula shown; [ESTIMATE] engineering
+# estimate listed in docs/09_open_parameters.md.  Quarter-car corner = one
+# wheel station; sprung mass = (curb or GVW share on that axle)/2 - m_u.
+#
+# Design rules used for [DERIVED] entries (Gillespie, Fundamentals of Vehicle
+# Dynamics, ch. 5; Zuo & Zhang 2013 Table 1 for the mid-size car):
+#   body (ride) frequency f_b = 1.1-1.3 Hz cars/pickups, 1.5-2.0 Hz trucks laden
+#   k_m = (2 pi f_b)^2 m_s (ride rate ~ k_m since k_t >> k_m)
+#   damping ratio zeta = 0.25-0.35 -> c_s = 2 zeta sqrt(k_m m_s)
+#   tire rate: cars 180-220 kN/m, light trucks 250-350 kN/m, truck tires 800-1200 kN/m
+#   per tire (dual tires double).
+
+midsize_car:
+  note: "Zuo & Zhang 2013 mid-size car; the validation (b) vehicle"
+  m_s: {value: 400.0, units: kg, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1 quarter-car sprung mass (~1600 kg car)"}
+  m_u: {value: 40.0, units: kg, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1"}
+  k_m: {value: 20000.0, units: N/m, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1 (k_s = 20 kN/m); f_b = 1.13 Hz"}
+  c_s: {value: 1500.0, units: N.s/m, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1 (c_s = 1500 N s/m); zeta = 0.27"}
+  k_t: {value: 180000.0, units: N/m, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1 (k_t = 180 kN/m)"}
+  gate_mass: {value: 10.0, units: kg, provenance: "[ESTIMATE] housing+generator+flyweights per corner; open"}
+
+f150:
+  note: "full-size pickup, curb ~2500 kg, light load"
+  m_s: {value: 560.0, units: kg, provenance: "[DERIVED] 2500 kg / 4 - 65 kg"}
+  m_u: {value: 65.0, units: kg, provenance: "[LITERATURE] light-truck corner unsprung 50-80 kg (Gillespie ch.5)"}
+  k_m: {value: 32000.0, units: N/m, provenance: "[DERIVED] f_b = 1.2 Hz: (2 pi 1.2)^2 * 560"}
+  c_s: {value: 2900.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.34"}
+  k_t: {value: 250000.0, units: N/m, provenance: "[LITERATURE] LT tire 250-300 kN/m"}
+  gate_mass: {value: 12.0, units: kg, provenance: "[ESTIMATE] open"}
+
+hd_pickup_loaded:
+  note: "HD pickup at 4500 kg"
+  m_s: {value: 1030.0, units: kg, provenance: "[DERIVED] 4500/4 - 95"}
+  m_u: {value: 95.0, units: kg, provenance: "[LITERATURE] HD solid-axle corner share 80-110 kg"}
+  k_m: {value: 70000.0, units: N/m, provenance: "[DERIVED] f_b = 1.3 Hz laden"}
+  c_s: {value: 5100.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.30"}
+  k_t: {value: 320000.0, units: N/m, provenance: "[LITERATURE] LT-E tire ~300-350 kN/m"}
+  gate_mass: {value: 14.0, units: kg, provenance: "[ESTIMATE] open"}
+
+box_truck:
+  note: "12,000 kg medium-duty box truck, rear duals"
+  m_s: {value: 2600.0, units: kg, provenance: "[DERIVED] 12000/4 - 400 (rear-biased load, per-corner average)"}
+  m_u: {value: 400.0, units: kg, provenance: "[LITERATURE] medium-duty axle+duals corner 300-500 kg"}
+  k_m: {value: 260000.0, units: N/m, provenance: "[DERIVED] f_b = 1.6 Hz"}
+  c_s: {value: 16000.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.31"}
+  k_t: {value: 1600000.0, units: N/m, provenance: "[LITERATURE] 2 x 800 kN/m truck tires (dual)"}
+  gate_mass: {value: 20.0, units: kg, provenance: "[ESTIMATE] open"}
+
+class8_tractor_empty:
+  note: "bobtail tractor ~9070 kg (20,000 lb), 6 wheel stations"
+  m_s: {value: 1100.0, units: kg, provenance: "[DERIVED] 9070/6 - 410"}
+  m_u: {value: 410.0, units: kg, provenance: "[LITERATURE] heavy drive axle share 350-500 kg"}
+  k_m: {value: 130000.0, units: N/m, provenance: "[DERIVED] f_b = 1.7 Hz empty (stiff for laden)"}
+  c_s: {value: 9000.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.38 empty"}
+  k_t: {value: 1800000.0, units: N/m, provenance: "[LITERATURE] 2 x 900 kN/m"}
+  gate_mass: {value: 25.0, units: kg, provenance: "[ESTIMATE] open"}
+
+class8_loaded:
+  note: "36,300 kg GVW tractor-trailer, 18 wheel stations (9 corners of duals)"
+  m_s: {value: 3600.0, units: kg, provenance: "[DERIVED] 36300/9 - 430 per dual station"}
+  m_u: {value: 430.0, units: kg, provenance: "[LITERATURE] as above"}
+  k_m: {value: 360000.0, units: N/m, provenance: "[DERIVED] f_b = 1.6 Hz laden"}
+  c_s: {value: 22000.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.31"}
+  k_t: {value: 1800000.0, units: N/m, provenance: "[LITERATURE] 2 x 900 kN/m"}
+  gate_mass: {value: 25.0, units: kg, provenance: "[ESTIMATE] open"}
+
+mrap_15t:
+  note: "MRAP-class 15,000 kg, 4 corners, TAK-4 coil"
+  m_s: {value: 3450.0, units: kg, provenance: "[DERIVED] 15000/4 - 300"}
+  m_u: {value: 300.0, units: kg, provenance: "[ESTIMATE] independent heavy corner 250-350 kg"}
+  k_m: {value: 280000.0, units: N/m, provenance: "[DERIVED] f_b = 1.4 Hz"}
+  c_s: {value: 20000.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.32"}
+  k_t: {value: 1100000.0, units: N/m, provenance: "[LITERATURE] 16.00R20 single ~1.0-1.2 MN/m"}
+  gate_mass: {value: 25.0, units: kg, provenance: "[ESTIMATE] open"}
+
+hmmwv:
+  note: "HMMWV ~3900 kg loaded, 4 corners, coil springs (AM General spec)"
+  m_s: {value: 830.0, units: kg, provenance: "[DERIVED] 3900/4 - 145"}
+  m_u: {value: 145.0, units: kg, provenance: "[ESTIMATE] geared hub + 37in tire 120-170 kg"}
+  k_m: {value: 60000.0, units: N/m, provenance: "[DERIVED] f_b = 1.35 Hz"}
+  c_s: {value: 4700.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.33"}
+  k_t: {value: 400000.0, units: N/m, provenance: "[LITERATURE] 37x12.5R16.5 at ~250 kPa ~350-450 kN/m"}
+  gate_mass: {value: 15.0, units: kg, provenance: "[ESTIMATE] open"}

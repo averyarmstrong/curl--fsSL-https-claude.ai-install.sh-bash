@@ -294,71 +294,79 @@ When mass is added to the vehicle, the propulsion penalty ΔP_mass (§9) is a
 ## 7. The road-power theorem: what any corner device can and cannot do
 
 This section is the physics behind `08_findings_that_change_the_story.md`
-entry 1. It is standard linear random-vibration theory (Zuo & Zhang 2013
-derive the same quantity via the H₂ norm); it is restated here because its
-consequence for the AKS narrative has not previously been drawn.
+entry 1. Zuo & Zhang (2013) obtained the linear case via the H₂ norm and
+reported "insensitivity" to suspension parameters; the statement below is
+exact, holds for nonlinear corners, and its consequence for the AKS
+narrative has not previously been drawn.
 
-**Claim.** For a linear corner model driven by white ground velocity of
-one-sided level W_v, the mean power the road delivers,
-P̄_road = E[F_t ż_r], is finite and bounded by W_v k_t/4, and in the
-fixed-body limit depends on nothing but k_t and the effective suspension
-stiffness:
+**Theorem.** Let the tire be a point-contact spring of rate k_t with no
+damping, and let everything above it (springs, dampers, the Gate, stops,
+clutches — linear or not) be a causal system with finite masses, so that
+nothing above the contact patch responds *instantaneously* to ground
+velocity. Drive the corner with ground velocity ż_r that is white, of
+one-sided level W_v (eq. 5.1), over the band in which the corner responds.
+Then the mean power the road delivers is
 
 ```
-P̄_road = W_v k_t² / (4 (k_t + k_eff))        (m_s → ∞, c_t = 0)          (7.1)
+P̄_road = E[F_t ż_r] = ¼ k_t W_v = π² G_d(n_0) n_0² V k_t                 (7.1)
 ```
 
-**Derivation (fixed-body limit).** With the body fixed the unsprung mass
-obeys m_u z̈_u + c ż_u + (k_eff + k_t) z_u = k_t z_r, where c is whatever
-dissipates (damper, generator, both). The transfer function from ground
-velocity v = ż_r to ż_u is H(s) = k_t / (m_u s² + c s + K), K = k_eff + k_t.
-For white one-sided input, E[ż_u²] = W_v ∫₀^∞ |H(j2πf)|² df =
-W_v k_t² / (4 c K) (standard integral ∫_{−∞}^{∞}|1/(ms²+cs+k)|² dω = π/(ck)).
-All power entering must be dissipated in steady state: P̄ = c E[ż_u²] =
-W_v k_t² / (4K). ∎
+independent of every parameter above the tire.
 
-Three consequences:
+**Proof.** F_t = k_t (z_r − z_u), so P̄_road = k_t E[z_r ż_r] − k_t E[z_u ż_r].
+For a Wiener-type z_r (white velocity), ½ d/dt E[z_r²] = W_v/4, so the first
+term is k_t W_v/4. In the second term z_u(t) is a non-anticipating functional
+of the velocity history up to t with no instantaneous component (its response
+to a velocity impulse starts from zero because m_u is finite), so it is
+uncorrelated with the white increment at t: E[z_u ż_r] = 0. ∎
+(For the band-limited stationary synthesis used in the code the two terms
+are redistributed — E[z_r ż_r] = 0 for any stationary process — but their
+sum is unchanged to the extent the band covers the corner's response; the
+Lyapunov/H₂ evaluation in `validate/analytic.py` returns ¼ k_t W_v to
+machine precision for arbitrary m_s, m_u, k_m, c_s, and the time-domain
+simulations, passive and with the Gate, reproduce it to within the
+realisation scatter — `tests/test_analytic_limits.py`.)
 
-1. **c cancels.** The amount of dissipation — damper, generator, or any
-   mix — does not change the mean power the road supplies; it changes how
-   large the motion must be to dissipate it. A generator that replaces the
-   damper's dissipation harvests the damper's power; it does not uncover a
-   larger reservoir.
-2. **Softer k_eff raises P̄ slightly**, toward the ceiling W_v k_t/4 as
-   k_eff → 0. The series soft stage lowers k_eff (eq. 2.2), so the Gate can
-   raise the pie by at most the factor (k_t + k_m)/(k_t + k_eff): for k_t =
-   200 kN/m, k_m = 25 kN/m, k_eff = 2.7 kN/m this is 1.11 — eleven percent,
-   not "several times".
-3. **The pie scales with G_d(n_0)·V·k_t**: roughness, speed and tire
-   stiffness. Vehicle weight enters only through the stiffer tires heavy
-   vehicles use and the finite-mass corrections below. "P ∝ W" is not a law
-   of this system.
+**Numbers.** Mid-size car (k_t = 180 kN/m), 60 mph: class A 7.6 W, B 30 W,
+C 122 W, D 488 W per corner; ×4 gives 30 / 122 / 488 / 1952 W per car. Zuo &
+Zhang's 100–400 W for "good to average" roads is the B–C band of this table.
+Everything else — vehicle weight, spring rates, damping, the Gate — changes
+*what happens to* these watts, not how many there are.
 
-**Finite masses.** For the full 2-DOF passive car the closed form is longer;
-`aks_lab.validate.analytic.mean_road_power()` evaluates the exact H₂
-integral by solving the Lyapunov equation of the state-space model, and
-`tests/test_analytic_limits.py` checks it against (7.1) as m_s → ∞ and
-against time-domain simulation to < 2%. Numerically (mid-size car, ISO C,
-60 mph) the full result is within ~15% of (7.1) across the entire realistic
-range of c_s, m_s and k_m — this is the "insensitive to suspension
-parameters" statement of Zuo & Zhang 2013, Table 2.
+Consequences:
+
+1. **The dissipator does not set the pie.** Damper, generator, or any
+   mix: the mean power supplied is fixed; what changes is how large the
+   motion must be to dissipate it. A generator that takes over the damper's
+   dissipation harvests the damper's watts. It does not uncover a reservoir
+   the damper had been missing.
+2. **Vehicle weight enters only through the tire.** Heavier vehicles run
+   stiffer tires (and more of them), so a loaded Class 8 wheel station on
+   duals (k_t ≈ 1.8 MN/m) sees 10× the power of a car corner on the same
+   road at the same speed — not because of its weight but because of its
+   tire stiffness. "P ∝ W" is not a law of this system; "P ∝ G_d V k_t" is.
+3. **Road class and speed are the levers.** One ISO class is a factor of
+   four; doubling speed doubles the power.
+4. **Tire damping and enveloping** (not in the theorem) are the only places
+   where the device upstream could change the mean input, and they act to
+   *reduce* it at high frequency. The model exposes c_t as a parameter.
 
 **Reactive power is not harvestable.** The instantaneous spring power
 k_m r_m ṙ_m has a large amplitude (of order the dissipated power divided by
-2ζ, i.e. a few times larger at ζ ≈ 0.3) and a mean of exactly zero. The AKS
+2ζ, a few times larger at ζ ≈ 0.3) and a mean of exactly zero. The AKS
 pitch-deck comparison "the spring handles several times the damper's flow"
 is a true statement about reactive power and an irrelevant one about
-harvest. The repo reports both numbers side by side so the distinction is
-visible.
+harvest. `metrics.energy` reports `P_spring_cycle` beside `P_road` so the
+distinction is visible in every table.
 
 **What the Gate *can* do** (and what the experiments test): (a) convert the
-dissipated share from heat to electricity with efficiency η_chain; (b) shift
+dissipated share from heat to electricity with efficiency η_chain; (b) move
 dissipation from the damper to the generator by changing the impedance the
-road sees, which changes ride and tire-load metrics (Q3); (c) raise the pie
-by the stiffness factor above; (d) lose some of it to clutch, friction, stop
-and generator losses; (e) add mass (Q2).
-
----
+road sees, which changes ride and tire-load metrics (Q3); (c) lose some of
+it to clutch, friction, stop and generator losses; (d) add mass (Q2). The
+ceiling on P_elec per corner is therefore η_chain · ¼ k_t W_v minus the
+damper's residual share, and the design problem is impedance matching
+against that fixed supply.
 
 ## 8. Definitions (normative; also in `02_definitions.md`)
 

@@ -107,15 +107,15 @@ eROT (125 W, 1800 kg, v≈0.08 m/s).
   suspension … plausibly several times the cited damper figures." This is
   the central open question (Q1). The document itself labels it "an
   empirical hypothesis to measure, not a derived certainty." We derive it in
-  `01_physics.md` §7 and test it numerically: for a quarter car under an ISO
+  `01_physics.md` §7 and test it numerically: for any corner under an ISO
   8608 road (white ground-velocity spectrum), the *mean* road input power is
-  set by tire stiffness, total corner mass, roughness and speed, and is
-  nearly independent of what sits between sprung and unsprung mass. The
+  exactly ¼·k_t·W_v — set by tire stiffness, roughness and speed alone — and
+  independent of everything above the tire, Gate included (01_physics §7). The
   series Gate redistributes that power; it does not enlarge the pie.
 - `P = κ·W·v` is dimensionally a force × velocity and encodes the (false in
   general) assumption that harvested power scales with static corner load.
-  Corner load enters the road-power formula only through `m_s + m_u`, and
-  then as `1/(m_s+m_u)` at fixed tire stiffness. We keep κ only as a
+  Corner load does not enter the road-power formula at all; vehicle weight
+  acts only through the stiffer tires heavy vehicles run. We keep κ only as a
   reporting shorthand and back it out from simulations (V4 in the old plan);
   we do not use it as a predictor.
 - Vehicle table (compact EV 110 W … tank 4.7 kW average) is linear

@@ -1,110 +1,70 @@
-"""Parameter loading with mandatory provenance.
+"""Provenance-enforcing parameter loading.
 
-params/params.yaml is the single source of truth.  Every leaf is a mapping
-{value, units, provenance}; loading fails loudly if provenance is missing.
+params/gate_baseline.yaml is the single source of truth for the Gate unit.
+Every leaf is {value, units, provenance}; loading fails loudly otherwise.
 """
 
 from __future__ import annotations
 
 import math
 import pathlib
-from dataclasses import dataclass
 
 import yaml
 
-DEFAULT_PARAMS_PATH = pathlib.Path(__file__).resolve().parents[2] / "params" / "params.yaml"
+from .elements.gate import Gate, GateParams
+from .elements.generator import LinearGenerator
 
-
-@dataclass(frozen=True)
-class Params:
-    """Mechanical parameters of the single-corner quarter-car + Gate model (SI)."""
-
-    # suspension
-    m_s: float = 560.0
-    m_u: float = 65.0
-    k_s: float = 32000.0
-    c_s: float = 2900.0
-    k_t: float = 250000.0
-    # gate frame (soft-first series stage)
-    m_f: float = 8.0
-    k_b: float = 9600.0
-    c_b: float = 100.0
-    x_b_max: float = 0.0635
-    k_stop: float = 2.0e6
-    c_stop: float = 8.0e3
-    # rectifier drivetrain
-    lead: float = 0.0254        # m per screw revolution
-    n_step: float = 6.0         # internal step-up ratio (generator shaft / screw shaft)
-    J: float = 3.0e-4           # flywheel + rotor inertia at generator shaft, kg m^2
-    c_w: float = 5.0e-5         # rotor windage/bearing viscous drag, N m s/rad
-    c_od: float = 2.0e-4        # sprag overrunning drag (viscous equivalent), N m s/rad
-    sprag_liftoff_rpm: float = 1200.0
-    # numerics
-    eps_engage: float = 1.0e-6  # rad/s hysteresis on engagement events
-
-    @property
-    def Gt(self) -> float:
-        """Stroke-to-generator-shaft ratio, rad/s per m/s of frame stroke rate."""
-        return 2.0 * math.pi * self.n_step / self.lead
-
-    @property
-    def Jr(self) -> float:
-        """Rotor inertia reflected onto the frame stroke DOF, kg (inertance)."""
-        return self.J * self.Gt**2
-
-
-def _leaf(parent: dict, path: str) -> float:
-    node = parent.get(path.rsplit(".", 1)[-1])
-    if not isinstance(node, dict) or "value" not in node:
-        raise ValueError(f"parameter '{path}' is not a {{value, units, provenance}} mapping")
-    if "provenance" not in node or not str(node["provenance"]).strip():
-        raise ValueError(f"parameter '{path}' has no provenance — forbidden (see CLAUDE.md)")
-    return node["value"]
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+GATE_YAML = ROOT / "params" / "gate_baseline.yaml"
 
 
 def missing_provenance(raw: dict, prefix: str = "") -> list[str]:
-    """Walk the raw YAML tree; return dotted paths of leaves lacking provenance."""
     bad: list[str] = []
     for key, node in raw.items():
         path = f"{prefix}{key}"
         if key == "meta":
             continue
         if isinstance(node, dict) and "value" in node:
-            if "provenance" not in node or not str(node.get("provenance", "")).strip():
+            if not str(node.get("provenance", "")).strip():
                 bad.append(path)
         elif isinstance(node, dict):
             bad.extend(missing_provenance(node, prefix=path + "."))
         else:
-            bad.append(path)  # bare scalar leaf: no provenance possible
+            bad.append(path)
     return bad
 
 
-def load_params(path: pathlib.Path | str = DEFAULT_PARAMS_PATH):
-    """Load params.yaml -> (Params, raw dict).  Raises if any provenance is missing."""
+def load_gate_raw(path=GATE_YAML) -> dict:
     raw = yaml.safe_load(pathlib.Path(path).read_text())
     bad = missing_provenance(raw)
     if bad:
         raise ValueError(f"parameters missing provenance: {bad}")
+    return raw
 
-    s, g = raw["suspension"], raw["gate"]
-    k_s = _leaf(s, "suspension.k_s")
-    p = Params(
-        m_s=_leaf(s, "suspension.m_s"),
-        m_u=_leaf(s, "suspension.m_u"),
-        k_s=k_s,
-        c_s=_leaf(s, "suspension.c_s"),
-        k_t=_leaf(s, "suspension.k_t"),
-        m_f=_leaf(g, "gate.m_f"),
-        k_b=_leaf(g, "gate.k_b_over_k_s") * k_s,
-        c_b=_leaf(g, "gate.c_b"),
-        x_b_max=_leaf(g, "gate.x_b_max"),
-        k_stop=_leaf(g, "gate.k_stop"),
-        c_stop=_leaf(g, "gate.c_stop"),
-        lead=_leaf(g, "gate.lead"),
-        n_step=_leaf(g, "gate.n_step"),
-        J=_leaf(g, "gate.J"),
-        c_w=_leaf(g, "gate.c_w"),
-        c_od=_leaf(g, "gate.c_od"),
-        sprag_liftoff_rpm=_leaf(g, "gate.sprag_liftoff_rpm"),
+
+def _v(node, key):
+    return node[key]["value"]
+
+
+def gate_from_yaml(k_m: float, overrides: dict | None = None, path=GATE_YAML) -> Gate:
+    """Build a Gate for a host whose main spring rate is k_m. overrides: {field: value}."""
+    raw = load_gate_raw(path)
+    o = dict(overrides or {})
+    ratio = o.pop("k_b_over_k_m", _v(raw, "k_b_over_k_m"))
+    travel = o.pop("travel", _v(raw, "travel"))
+    eqf = o.pop("eq_fraction", _v(raw, "eq_fraction"))
+    c_gen = o.pop("c_gen", _v(raw["generator"], "c_gen"))
+    eta = o.pop("eta", _v(raw["generator"], "eta"))
+    t_cap = _v(raw, "T_cap")
+    fields = dict(
+        k_b=ratio * k_m,
+        c_b=_v(raw, "c_b"), x_c=eqf * travel, x_e=(1 - eqf) * travel,
+        k_stop=_v(raw, "k_stop"), c_stop=_v(raw, "c_stop"), r=_v(raw, "r"), J=_v(raw, "J"),
+        c_w=_v(raw, "c_w"), c_od=_v(raw, "c_od"), theta_bl=_v(raw, "theta_bl"),
+        T_cap=math.inf if t_cap is None else float(t_cap),
+        sprag_liftoff_rpm=_v(raw, "sprag_liftoff_rpm"),
     )
-    return p, raw
+    if "k_b" in o:
+        fields["k_b"] = o.pop("k_b")
+    fields.update(o)
+    return Gate(GateParams(**fields), LinearGenerator(c_gen, eta))
