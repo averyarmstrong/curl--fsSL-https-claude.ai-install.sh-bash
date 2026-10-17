@@ -1,0 +1,28 @@
+2026-10-17 03:35:57,828 INFO sweep: 102 cases (102 to run) on 4 workers
+2026-10-17 03:36:21,795 INFO 8/102 done, 0 errors, 24 s elapsed, ~282 s left
+2026-10-17 03:36:36,913 INFO 16/102 done, 0 errors, 39 s elapsed, ~210 s left
+2026-10-17 03:36:52,460 INFO 24/102 done, 0 errors, 55 s elapsed, ~178 s left
+2026-10-17 03:37:07,668 INFO 32/102 done, 0 errors, 70 s elapsed, ~153 s left
+2026-10-17 03:37:23,181 INFO 40/102 done, 0 errors, 85 s elapsed, ~132 s left
+2026-10-17 03:37:38,534 INFO 48/102 done, 0 errors, 101 s elapsed, ~113 s left
+2026-10-17 03:37:53,600 INFO 56/102 done, 0 errors, 116 s elapsed, ~95 s left
+2026-10-17 03:38:09,258 INFO 64/102 done, 0 errors, 131 s elapsed, ~78 s left
+2026-10-17 03:38:24,216 INFO 72/102 done, 0 errors, 146 s elapsed, ~61 s left
+2026-10-17 03:38:40,535 INFO 80/102 done, 0 errors, 163 s elapsed, ~45 s left
+2026-10-17 03:38:55,522 INFO 88/102 done, 0 errors, 178 s elapsed, ~28 s left
+2026-10-17 03:39:11,096 INFO 96/102 done, 0 errors, 193 s elapsed, ~12 s left
+2026-10-17 03:39:25,704 INFO 102/102 done, 0 errors, 208 s elapsed, ~0 s left
+2026-10-17 03:39:25,743 INFO sweep finished: 102 rows, 0 errors, 208 s
+## Results (auto-generated)
+
+### Flywheel sweep (r = 300.0)
+
+| gate_J | Jr | P_elec | P_elec_lo | P_elec_hi | phi | P_net | rpm | rpm_p95 | d_a_w_pct | closure |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1e-05 | 0.9 | 9.7 | 9.5 | 9.9 | 0.079 | -20.6 | 254 | 623 | -5.8 | 5.9e-06 |
+| 3e-05 | 2.7 | 9.7 | 9.5 | 9.9 | 0.079 | -20.6 | 256 | 622 | -5.6 | 5.9e-06 |
+| 1e-04 | 9.0 | 9.6 | 9.4 | 9.8 | 0.078 | -20.6 | 261 | 614 | -4.9 | 6.0e-06 |
+| 3e-04 | 27.0 | 9.3 | 9.1 | 9.5 | 0.075 | -20.7 | 273 | 570 | -3.8 | 6.2e-06 |
+| 1e-03 | 90.0 | 8.9 | 8.5 | 9.0 | 0.072 | -20.8 | 287 | 498 | -3.3 | 6.5e-06 |
+| 3e-03 | 270.0 | 8.5 | 8.1 | 8.6 | 0.069 | -21.0 | 293 | 432 | -3.4 | 6.6e-06 |
+

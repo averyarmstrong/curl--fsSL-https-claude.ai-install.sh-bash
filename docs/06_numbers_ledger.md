@@ -35,3 +35,7 @@ experiment's `results/RESULTS.md` for the full tables.)*
 | 19.5 / 34.8 / 79.5 | W per corner | ±3 % | ISO C 60 mph, OEM damper ×0.25 (DTL +26–53 %) | modeled | exp 002 | 2026-10-17 |
 | 0.08 / 0.09 / 0.11 | φ | — | stock damper, any class A–D, 30 or 60 mph: midsize / F-150 / HMMWV | modeled | exp 002 | 2026-10-17 |
 | −21 / −23 / −18 | W net per corner | — | ISO C 60 mph stock damper incl. 10/12/15 kg mass penalty | modeled | exp 002 | 2026-10-17 |
+| ≲ 10 | kg | — | reflected inertance J r² below which output is flat (passenger-car corner) | modeled | exp 004 | 2026-10-17 |
+| 7.3 – 10.0 | W per corner | ±2 % | k_b/k_m 0.8 → 0.05, ISO C 60 mph, stock damper; t_stop = 0 at 2–5 in travel | modeled | exp 005 | 2026-10-17 |
+| 46.8 | W per corner | ±3 % | OEM damper on main stage only (integrated layout), ISO C 60 mph, midsize; DTL +40 % | modeled | exp 006 | 2026-10-17 |
+| 0.7 | — | — | rotor speed ripple std/mean, insensitive to J 1e-5 – 3e-3 (clutches engaged 90–95 % of time) | modeled | exp 006 | 2026-10-17 |

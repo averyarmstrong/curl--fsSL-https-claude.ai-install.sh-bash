@@ -101,8 +101,13 @@ per km against ratio and travel. Preloading to the static load, as
 proposed, puts the equilibrium *at* the extension stop and makes the device
 half-wave (rebound cannot expand a frame that is already fully expanded).
 
-**How sure.** Arithmetic for the static part; the dynamic rates come from
-the model. (To be completed with experiment 005 numbers.)
+**How sure.** Arithmetic for the static part. **Experiment 005 narrows the
+regime:** with the OEM damper in place the frame stage is dominated by the
+reflected generator damping, strokes only 7–9 mm RMS on ISO C at 60 mph,
+and never reaches a stop at any ratio (0.05–0.8) or travel (2–5 in).
+Stops become real when the damper is reduced or on class D (experiment
+002: 5–12 % of the time, 22–58 contacts/km). The static few-percent load
+margin is correct but is not the operating regime on paved roads.
 
 **What to say instead.** The travel/ratio/preload triple is a design
 decision with a hard trade-off, not a feature; the patent's "2–5 in" is a
@@ -167,6 +172,13 @@ car; the estimate is open.) The nonlinear sweeps (001–003) include stops,
 freewheeling and partial engagement and can only come in at or below these
 numbers; experiment 001 at the surrogate's load point gives 9.7 W vs the
 surrogate's 10.6 W.
+
+**Damper placement (experiment 006).** Mounting the OEM shock between the
+frame's bottom plate and the axle, so it no longer bridges the Gate, raises
+the mid-size-car corner from 9.7 W to 46.8 W (φ 0.38) on ISO C at 60 mph —
+with tire-load RMS +40 % and W_k −39 %, the same trade the retrofit pays
+for cutting its damper. The harvest-vs-grip curve is one curve; layout and
+damper scale move along it.
 
 **Nonlinear confirmation (experiment 002, 504 runs).** φ with the stock
 damper: 0.08 (car), 0.09 (F-150), 0.11 (HMMWV) on every class and speed;

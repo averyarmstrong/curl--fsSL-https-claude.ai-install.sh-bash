@@ -1,0 +1,2600 @@
+[
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "passive",
+  "gate": null
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.05,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.05,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.1198,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.25,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.25,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.5,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.5,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.0508
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.0508
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.1016
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.1016
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.003,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.01,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 3,
+  "tag": "gate",
+  "gate": {
+   "c_gen": 0.03,
+   "r": 300.0,
+   "J": 3e-05,
+   "k_b_over_k_m": 0.8,
+   "travel": 0.127
+  },
+  "kb_ratio": 0.8,
+  "travel": 0.127
+ }
+]
