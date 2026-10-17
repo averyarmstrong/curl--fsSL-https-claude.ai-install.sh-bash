@@ -145,3 +145,21 @@ validate against closed forms and the Zuo baseline, run experiments
   because the fit absorbs inertance and partial engagement — the bench
   comparison must run the model with the measured J, not read c_gen off the
   fit.
+
+### Later in session 2 (03:00–03:10)
+
+- **Exp 001 first pass**: φ 0.03–0.08 with the stock damper; best c_gen 0.01
+  at r = 300 (c_eq = 900 N·s/m). P_net negative. Added `c_s_scale` axis and
+  re-ran; chain 001→002→004→005→006→003 launched 02:57.
+- **Linear surrogate** (`validate.analytic.linear_gate_power`): exact H₂ of
+  the corner with the frame stage as k_b ∥ c_eq ∥ inerter. Matches the
+  nonlinear point (10.6 vs 9.7 W). Gave the frontier in minutes: optimum
+  c_eq ≈ 300–500 N·s/m, nearly independent of k_b/k_m; tire-load variation
+  is the binding constraint; passenger-car P_net < 0 below ISO D (F5).
+  Lesson: build the linear surrogate *first* next time; it would have set
+  the sweep grids correctly before burning CPU on r = 1484.
+- **numba RHS** (`vehicles/quarter_car_fast.py`): 3.5× faster with the
+  cores loaded; equivalence to the reference 1e-4 (3 configurations incl.
+  backlash and torque-capacity slip). Sweeps default to it.
+- **Exp 007 (Monte Carlo)** script written; 1152 cases; to run after the
+  chain.
