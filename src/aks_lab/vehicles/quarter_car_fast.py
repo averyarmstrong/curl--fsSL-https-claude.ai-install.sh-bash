@@ -229,6 +229,8 @@ class QuarterCarGateFast:
                  damper_span: str = "full", lock: str | None = None):
         if njit is None:
             raise ImportError("numba is required for QuarterCarGateFast")
+        if corner.tire_oneside:
+            raise NotImplementedError("one-sided tire: use the reference QuarterCarGate")
         self.c, self.g, self.p, self.road, self.m_f, self.span, self.lock = corner, gate, gate.p, road, m_f, damper_span, lock
         self.P = pack(corner, gate, m_f, damper_span)
         self.xb, self.cc = spline_arrays(road)

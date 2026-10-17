@@ -1,0 +1,3982 @@
+[
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "midsize_car",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "A",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "B",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "C",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "D",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 1,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": false,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": null,
+  "tire_oneside": true,
+  "bf_name": "none"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 25.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_lo"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 0.2,
+   "f_hi": 3.0
+  },
+  "tire_oneside": false,
+  "bf_name": "wind_hi"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "passive",
+  "gate": null,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ },
+ {
+  "vehicle": "hmmwv",
+  "klass": "E",
+  "speed": 26.82,
+  "duration": 40.0,
+  "damper_span": "full",
+  "m_f": 8.0,
+  "seed": 2,
+  "tag": "gate",
+  "gate": {
+   "r": 300.0,
+   "J": 3e-05,
+   "c_gen": 0.01,
+   "k_b_over_k_m": 0.1198,
+   "travel": 0.1016
+  },
+  "c_s_scale": 1.0,
+  "body_force": {
+   "rms": 100.0,
+   "f_lo": 20.0,
+   "f_hi": 40.0
+  },
+  "tire_oneside": false,
+  "bf_name": "powertrain"
+ }
+]

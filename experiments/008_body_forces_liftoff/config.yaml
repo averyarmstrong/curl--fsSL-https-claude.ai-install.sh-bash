@@ -1,0 +1,18 @@
+# Experiment 008 — the two input channels the road-power theorem does not
+# cover: (a) direct body forces (wind buffeting 0.2-3 Hz; powertrain 20-40 Hz)
+# and (b) a one-sided tire (wheel lift-off) on rough roads.
+# Question: how many watts do these add or remove, per corner, against the
+# road channel, for a car and a tactical vehicle?
+vehicles: [midsize_car, hmmwv]
+classes: [A, B, C, D, E]
+speed_mps: 26.82
+duration_s: 40.0
+seeds: [1, 2]
+gate: {r: 300.0, J: 0.00003, c_gen: 0.01, k_b_over_k_m: 0.1198, travel: 0.1016}
+c_s_scale: 1.0
+body_forces:                # per CORNER (quarter of the vehicle-level force)
+  none:        null
+  wind_lo:     {rms: 25.0,  f_lo: 0.2,  f_hi: 3.0}    # ~100 N RMS per vehicle, gusty highway
+  wind_hi:     {rms: 100.0, f_lo: 0.2,  f_hi: 3.0}    # ~400 N RMS per vehicle, strong crosswind / big van
+  powertrain:  {rms: 100.0, f_lo: 20.0, f_hi: 40.0}   # engine/driveline order vibration into the body
+tire_oneside: [false, true]

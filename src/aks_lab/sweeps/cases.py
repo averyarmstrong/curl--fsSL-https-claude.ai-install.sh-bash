@@ -9,6 +9,8 @@ re-run.  Keys:
   delta_m: added hardware mass (kg)     tag: free text
   c_s_scale: OEM damper scale on the Gate corner (baseline keeps 1.0)
   fast: use the numba model when available (default True)
+  body_force: None or {"rms": N, "f_lo": Hz, "f_hi": Hz} band-limited white force on the sprung mass
+  tire_oneside: bool, contact lost when total tire force would go negative
 """
 
 from __future__ import annotations
@@ -23,6 +25,7 @@ import numpy as np
 from ..metrics import energy_metrics, handling_metrics, p_net, ride_metrics, sizing_metrics
 from ..params import gate_from_yaml
 from ..roads import iso8608_profile
+from ..roads.body_force import band_limited_force
 from ..vehicles import PassiveQuarterCar, QuarterCarGate, corner
 
 try:  # numba-compiled RHS, equivalent to the reference to 1e-4 (tests/test_fast_equivalence.py)
@@ -51,8 +54,17 @@ def run_case(case: dict) -> dict:
         c, gm = corner(case["vehicle"])
         dm = case.get("delta_m", gm)
         road = iso8608_profile(case["klass"], case["speed"], case["duration"], seed=case["seed"])
+        if case.get("tire_oneside"):
+            from dataclasses import replace
+            c = replace(c, tire_oneside=True)
+        bf = case.get("body_force")
+        f_body = None
+        if bf:
+            f_body = band_limited_force(bf["rms"], bf.get("f_lo", 0.2), bf.get("f_hi", 3.0),
+                                        case["duration"], seed=10_000 + case["seed"])
+        needs_ref = bool(bf) or bool(case.get("tire_oneside"))
         if case.get("gate") is None:
-            res = PassiveQuarterCar(c, road, m_extra=dm).simulate(case["duration"])
+            res = PassiveQuarterCar(c, road, m_extra=dm, f_body=f_body).simulate(case["duration"])
             row["is_gate"] = False
         else:
             g = gate_from_yaml(c.k_m, case["gate"])
@@ -60,9 +72,11 @@ def run_case(case: dict) -> dict:
             if cs_scale != 1.0:   # the Gate corner may carry a smaller OEM damper; the baseline keeps stock
                 from dataclasses import replace
                 c = replace(c, c_s=c.c_s * cs_scale)
-            model = _FastModel if (_FastModel is not None and case.get("fast", True)) else QuarterCarGate
+            use_fast = _FastModel is not None and case.get("fast", True) and not needs_ref
+            model = _FastModel if use_fast else QuarterCarGate
+            kw = {} if use_fast else {"f_body": f_body}
             res = model(c, g, road, m_f=case.get("m_f", 8.0),
-                        damper_span=case.get("damper_span", "full")).simulate(case["duration"])
+                        damper_span=case.get("damper_span", "full"), **kw).simulate(case["duration"])
             row["is_gate"] = True
             row["model"] = model.__name__
             row.update({f"gate_{k}": v for k, v in g.describe().items() if k != "generator"})

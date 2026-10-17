@@ -27,10 +27,14 @@ from ..elements.gate import ENG_A, ENG_B, FREE, SIGN, SLIP_A, SLIP_B, Gate
 from ..solvers.hybrid import HybridTrace, integrate
 
 ZS, VS, ZF, VF, ZU, VU, OM, PHA, PHB = range(9)
-E_DAMP, E_FRIC, E_STOP, E_CLUTCH, E_ELEC, E_GENLOSS, E_ROAD, E_GATE, E_FRAME = range(9, 18)
-NSTATE = 18
+E_DAMP, E_FRIC, E_STOP, E_CLUTCH, E_ELEC, E_GENLOSS, E_ROAD, E_GATE, E_FRAME, E_BODY = range(9, 19)
+NSTATE = 19
 ENERGY_NAMES = ["E_damper", "E_friction", "E_stop", "E_clutch", "E_elec", "E_genloss",
-                "E_road", "E_gate", "E_frame"]
+                "E_road", "E_gate", "E_frame", "E_body"]
+
+
+def _zero_force(t: float) -> float:
+    return 0.0
 
 
 @dataclass(frozen=True)
@@ -44,10 +48,29 @@ class CornerParams:
     k_t: float          # tire vertical rate, N/m
     c_t: float = 0.0    # tire damping, N s/m
     name: str = "corner"
+    tire_oneside: bool = False   # True: contact is lost when the total tire force would go negative
 
     @property
     def static_load(self) -> float:
         return (self.m_s + self.m_u) * 9.80665
+
+    @property
+    def r_t_liftoff(self) -> float:
+        """Perturbation tire deflection at which the total (static + dynamic) tire force reaches zero."""
+        return -self.static_load / self.k_t
+
+    def tire_force(self, r_t: float, dr_t: float) -> float:
+        """Perturbation tire force (total minus static). One-sided: clamps at -static_load when airborne."""
+        if self.tire_oneside and r_t < self.r_t_liftoff:
+            return -self.static_load
+        return self.k_t * r_t + self.c_t * dr_t
+
+    def tire_potential(self, r_t: float) -> float:
+        """Elastic potential consistent with tire_force (C1 continuation past lift-off)."""
+        r0 = self.r_t_liftoff
+        if self.tire_oneside and r_t < r0:
+            return 0.5 * self.k_t * r0 * r0 - self.static_load * (r_t - r0)
+        return 0.5 * self.k_t * r_t * r_t
 
     @property
     def body_hz(self) -> float:
@@ -108,11 +131,9 @@ class SimResult:
 
     def tire_force(self):
         zr = self.road_z()
-        f = self.corner.k_t * (self.z_u - zr)
-        if self.corner.c_t:
-            zrd = np.array([self.road.zdot(ti) for ti in self.t])
-            f = f + self.corner.c_t * (self.v_u - zrd)
-        return f
+        zrd = np.array([self.road.zdot(ti) for ti in self.t])
+        c = self.corner
+        return np.array([c.tire_force(zu - a, vu - b) for zu, a, vu, b in zip(self.z_u, zr, self.v_u, zrd)])
 
     def sprung_accel(self):
         return np.gradient(self.v_s, self.t)
@@ -141,7 +162,7 @@ class SimResult:
     def storage(self, i: int) -> float:
         c, y = self.corner, self.y[:, i]
         r_t = y[ZU] - self.road.z(self.t[i])
-        e = (0.5 * c.m_s * y[VS] ** 2 + 0.5 * c.m_u * y[VU] ** 2 + 0.5 * c.k_t * r_t**2)
+        e = (0.5 * c.m_s * y[VS] ** 2 + 0.5 * c.m_u * y[VU] ** 2 + c.tire_potential(r_t))
         if self.has_gate:
             p = self.gate.p
             r_b = y[ZS] - y[ZF]
@@ -163,8 +184,10 @@ class SimResult:
         e = self.energies()
         diss = (e["E_damper"] + e["E_friction"] + e["E_stop"] + e["E_clutch"]
                 + e["E_elec"] + e["E_genloss"])
-        residual = e["E_road"] - diss - e["dE_storage"]
-        denom = max(abs(e["E_road"]), diss + abs(e["dE_storage"]), 1e-12)
+        e_in = e["E_road"] + e["E_body"]
+        residual = e_in - diss - e["dE_storage"]
+        denom = max(abs(e_in), diss + abs(e["dE_storage"]), 1e-12)
+        e["E_in_total"] = e_in
         e["residual"] = residual
         e["closure"] = abs(residual) / denom
         return e
@@ -184,11 +207,13 @@ class SimResult:
 # Passive corner (linear 2-DOF) — the Q3 comparator and the analytic anchor
 # ---------------------------------------------------------------------------
 class PassiveQuarterCar:
-    def __init__(self, corner: CornerParams, road, m_extra: float = 0.0):
-        """m_extra: Gate hardware mass added to the sprung mass for equal-mass comparison."""
+    def __init__(self, corner: CornerParams, road, m_extra: float = 0.0, f_body=None):
+        """m_extra: Gate hardware mass added to the sprung mass for equal-mass comparison.
+        f_body: callable t -> vertical force on the sprung mass [N] (wind, powertrain, payload)."""
         self.c = corner
         self.m_s = corner.m_s + m_extra
         self.road = road
+        self.f_body = f_body or _zero_force
 
     def _rhs(self, t, y):
         c = self.c
@@ -196,14 +221,16 @@ class PassiveQuarterCar:
         r = y[ZS] - y[ZU]
         dr = y[VS] - y[VU]
         f_s = c.k_m * r + c.c_s * dr
-        f_t = c.k_t * (y[ZU] - zr) + c.c_t * (y[VU] - zrd)
+        f_t = c.tire_force(y[ZU] - zr, y[VU] - zrd)
+        fb = self.f_body(t)
         dy = np.zeros(NSTATE)
         dy[ZS], dy[ZU] = y[VS], y[VU]
-        dy[VS] = -f_s / self.m_s
+        dy[VS] = (fb - f_s) / self.m_s
         dy[VU] = (f_s - f_t) / c.m_u
         dy[E_DAMP] = c.c_s * dr * dr
         dy[E_GENLOSS] = c.c_t * (y[VU] - zrd) ** 2   # tire loss booked here for the passive car
         dy[E_ROAD] = -f_t * zrd
+        dy[E_BODY] = fb * y[VS]
         return dy
 
     def simulate(self, t_end, rtol=1e-8, atol=1e-9, dt_out=2e-3, max_step=5e-3,
@@ -213,7 +240,8 @@ class PassiveQuarterCar:
                         rtol=rtol, atol=atol, max_step=max_step)
         if not sol.success:
             raise RuntimeError(sol.message)
-        corner = CornerParams(self.m_s, self.c.m_u, self.c.k_m, self.c.c_s, self.c.k_t, self.c.c_t, self.c.name)
+        corner = CornerParams(self.m_s, self.c.m_u, self.c.k_m, self.c.c_s, self.c.k_t, self.c.c_t, self.c.name,
+                              self.c.tire_oneside)
         res = SimResult(sol.t, sol.y, self.road, corner, None, 0.0, "full",
                         segments=[("passive", 0.0, t_end)], n_rhs=sol.nfev)
         res.t_stationary = _default_stationary(t_end) if t_stationary is None else t_stationary
@@ -231,7 +259,7 @@ class QuarterCarGate:
     """Chassis -> Gate frame stage -> shortened main spring (+ damper) -> axle -> tire -> road."""
 
     def __init__(self, corner: CornerParams, gate: Gate, road, m_f: float = 8.0,
-                 damper_span: str = "full", lock: str | None = None):
+                 damper_span: str = "full", lock: str | None = None, f_body=None):
         if damper_span not in ("full", "main"):
             raise ValueError("damper_span must be 'full' or 'main'")
         self.c = corner
@@ -241,6 +269,7 @@ class QuarterCarGate:
         self.m_f = m_f
         self.span = damper_span
         self.lock = lock
+        self.f_body = f_body or _zero_force
         self.nstate = NSTATE
 
     # -- common force assembly --------------------------------------------------
@@ -254,13 +283,13 @@ class QuarterCarGate:
         f_m = c.k_m * r_m
         dr_d = (y[VS] - y[VU]) if self.span == "full" else (y[VF] - y[VU])
         f_d = c.c_s * dr_d
-        f_t = c.k_t * (y[ZU] - zr) + c.c_t * (y[VU] - zrd)
+        f_t = c.tire_force(y[ZU] - zr, y[VU] - zrd)
         return r_b, dr_b, f_b_pass, f_stop, pen, f_m, f_d, dr_d, f_t, zr, zrd
 
-    def _ext_forces(self, f_d, f_m):
+    def _ext_forces(self, f_d, f_m, fb=0.0):
         if self.span == "full":
-            return -f_d, -f_m            # top node, bottom node (excluding frame stage)
-        return 0.0, -f_m - f_d
+            return fb - f_d, -f_m        # top node, bottom node (excluding frame stage)
+        return fb, -f_m - f_d
 
     def _fill(self, dy, y, dr_b, dr_d, f_stop, pen, f_t, zrd, f_b_total,
               p_clutch, p_elec, p_gl, p_gate):
@@ -275,6 +304,7 @@ class QuarterCarGate:
         dy[E_ROAD] = -f_t * zrd
         dy[E_GATE] = p_gate
         dy[E_FRAME] = f_b_total * dr_b
+        dy[E_BODY] = self._fb_now * y[VS]
 
     # -- rhs per mode -----------------------------------------------------------
     def rhs(self, mode, t, y):
@@ -282,7 +312,8 @@ class QuarterCarGate:
         (r_b, dr_b, f_b_pass, f_stop, pen, f_m, f_d, dr_d, f_t, zr, zrd) = self._common(t, y)
         om = y[OM]
         dy = np.zeros(NSTATE)
-        f_top_ext, f_bot_ext = self._ext_forces(f_d, f_m)
+        self._fb_now = fb = self.f_body(t)
+        f_top_ext, f_bot_ext = self._ext_forces(f_d, f_m, fb)
 
         if mode == FREE:
             t_a, t_b, f_ax, p_drag = g.overrun(dr_b, om)
@@ -327,7 +358,7 @@ class QuarterCarGate:
     # -- events -----------------------------------------------------------------
     def _tc(self, s, t, y):
         (r_b, dr_b, f_b_pass, f_stop, pen, f_m, f_d, dr_d, f_t, zr, zrd) = self._common(t, y)
-        f_top_ext, f_bot_ext = self._ext_forces(f_d, f_m)
+        f_top_ext, f_bot_ext = self._ext_forces(f_d, f_m, self.f_body(t))
         om = y[OM]
         om_other = -s * self.p.r * dr_b
         t_other = self.p.c_od * (om_other - om)

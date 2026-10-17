@@ -13,8 +13,13 @@ def energy_metrics(res) -> dict:
     dr_m = np.gradient(r_m, res.t[m])
     p_spring_cycle = float(np.mean(np.abs(k_m * r_m * dr_m)))
     p_road = r["P_road"]
+    p_body = r.get("P_body", 0.0)
+    p_in = p_road + p_body
     out = {
         "P_road": p_road,
+        "P_body": p_body,
+        "P_in_total": p_in,
+        "phi_total": r["P_elec"] / p_in if p_in > 0 else np.nan,
         "P_elec": r["P_elec"],
         "P_gate": r["P_gate"],
         "P_frame": r["P_frame"],
