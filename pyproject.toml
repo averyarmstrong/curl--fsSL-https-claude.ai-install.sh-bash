@@ -40,3 +40,4 @@ ignore = ["E501"]
 
 [tool.ruff.lint.per-file-ignores]
 "experiments/*" = ["E702", "E401", "E402"]
+"reports/*" = ["E702"]

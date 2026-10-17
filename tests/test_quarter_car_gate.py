@@ -55,3 +55,18 @@ def test_metrics_and_baseline(res):
     assert rb["a_w_rms"] > 0
     pn = p_net(e, GM, 26.82)
     assert pn["dP_ride"] is None and pn["P_net"] < pn["P_elec"]
+
+
+def test_case_worker_damper_scale_and_baseline_rows():
+    """The sweep worker: a passive row, a gate row, and a reduced-damper gate row all close and carry metrics."""
+    from aks_lab.sweeps.cases import run_case
+    base = dict(vehicle="midsize_car", klass="C", speed=26.82, duration=6.0, seed=3, damper_span="full", m_f=8.0)
+    rows = [run_case({**base, "gate": None, "tag": "passive"}),
+            run_case({**base, "tag": "gate", "gate": {"c_gen": 0.01, "r": 300.0, "J": 3e-5}}),
+            run_case({**base, "tag": "gate", "c_s_scale": 0.25, "gate": {"c_gen": 0.01, "r": 300.0, "J": 3e-5}})]
+    for r in rows:
+        assert r.get("error") is None, r.get("error")
+        assert r["closure"] < 0.01
+    assert rows[0]["is_gate"] is False and rows[1]["is_gate"] is True
+    assert rows[2]["P_damper"] < rows[1]["P_damper"]
+    assert rows[2]["P_elec"] > rows[1]["P_elec"]

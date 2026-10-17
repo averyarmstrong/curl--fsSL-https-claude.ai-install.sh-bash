@@ -85,3 +85,15 @@ def test_road_power_scales_with_speed_and_class_only():
     base = mean_road_power(C, "C", 26.82)["P_road"]
     assert abs(mean_road_power(C, "C", 2 * 26.82)["P_road"] / base - 2.0) < 1e-9
     assert abs(mean_road_power(C, "D", 26.82)["P_road"] / base - 4.0) < 1e-9
+
+
+def test_linear_gate_surrogate_conserves_and_tracks_simulation():
+    """Linearised Gate corner: dissipations sum to the supply; P_elec near the nonlinear sim at a low-inertance point."""
+    from aks_lab.validate.analytic import linear_gate_power
+    k_b = C.k_m / 8.35
+    for b in (0.0, 27.0, 660.0):
+        r = linear_gate_power(C, "C", 26.82, k_b, c_eq=900.0, b_inert=b, c_b=100.0)
+        assert r["closure"] < 1e-6, r
+    r = linear_gate_power(C, "C", 26.82, k_b, c_eq=0.01 * 300**2, b_inert=3e-5 * 300**2, c_b=100.0)
+    # exp 001 nonlinear median at this point: 9.7 W (r=300, J=3e-5, c_gen=0.01, stock damper)
+    assert 6.0 < r["P_elec"] < 16.0, r["P_elec"]
