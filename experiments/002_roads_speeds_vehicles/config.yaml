@@ -1,0 +1,15 @@
+# Experiment 002 — roads A-D x 30/60 mph x {midsize_car, f150, hmmwv}.
+# Question: per-corner P_elec, phi, P_net, ride/tire deltas and stop rate as
+# ranges (over seeds) by road class and speed. Gate at the best low-inertance
+# load point from exp 001 (r=300, J=3e-5) with c_gen re-swept coarsely per
+# vehicle so the load is matched, not inherited.
+vehicles: [midsize_car, f150, hmmwv]
+classes: [A, B, C, D]
+speeds_mps: [13.41, 26.82]
+duration_s: 40.0
+seeds: [1, 2, 3]
+r: 300.0
+J: 0.00003
+k_b_over_k_m: 0.1198
+travel_m: 0.1016
+c_gen: [0.003, 0.01, 0.03]

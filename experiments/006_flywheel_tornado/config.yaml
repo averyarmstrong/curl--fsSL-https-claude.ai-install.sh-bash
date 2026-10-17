@@ -1,0 +1,25 @@
+# Experiment 006 — flywheel inertia sweep + one-at-a-time tornado over the
+# open parameters (docs/09_open_parameters.md), mid-size car, ISO C, 60 mph,
+# at the exp-001 low-inertance load point. Each bar: metric at the low and
+# high end of the parameter's range, all else at baseline.
+vehicle: midsize_car
+klass: C
+speed_mps: 26.82
+duration_s: 40.0
+seeds: [1, 2, 3]
+baseline: {c_gen: 0.01, r: 300.0, J: 0.00003, k_b_over_k_m: 0.1198, travel: 0.1016}
+J_sweep: [0.00001, 0.00003, 0.0001, 0.0003, 0.001, 0.003]
+tornado:
+  J:            [0.00001, 0.0003]
+  r:            [150.0, 800.0]
+  c_gen:        [0.003, 0.03]
+  k_b_over_k_m: [0.05, 0.5]
+  travel:       [0.0508, 0.127]
+  eq_fraction:  [0.3, 0.7]
+  c_b:          [20.0, 500.0]
+  c_od:         [0.00005, 0.001]
+  theta_bl:     [0.0, 0.0087]
+  c_w:          [0.00001, 0.0005]
+  k_stop:       [200000.0, 20000000.0]
+  m_f:          [3.0, 15.0]
+  damper_span:  [main, full]

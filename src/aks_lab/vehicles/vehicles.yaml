@@ -12,12 +12,12 @@
 #   per tire (dual tires double).
 
 midsize_car:
-  note: "Zuo & Zhang 2013 mid-size car; the validation (b) vehicle"
-  m_s: {value: 400.0, units: kg, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1 quarter-car sprung mass (~1600 kg car)"}
-  m_u: {value: 40.0, units: kg, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1"}
-  k_m: {value: 20000.0, units: N/m, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1 (k_s = 20 kN/m); f_b = 1.13 Hz"}
-  c_s: {value: 1500.0, units: N.s/m, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1 (c_s = 1500 N s/m); zeta = 0.27"}
-  k_t: {value: 180000.0, units: N/m, provenance: "[LITERATURE] Zuo & Zhang 2013 Table 1 (k_t = 180 kN/m)"}
+  note: "mid-size car; the validation (b) vehicle. Values are literature-typical for a ~1600 kg sedan; Zuo & Zhang 2013 Table 1 itself was NOT retrievable in this environment (docs/04_prior_art.md item 2), so these are not claimed to be its numbers."
+  m_s: {value: 400.0, units: kg, provenance: "[LITERATURE] typical mid-size sedan quarter-car sprung mass, 1600 kg class (Gillespie ch.5); consistent with values commonly used in regenerative-suspension studies"}
+  m_u: {value: 40.0, units: kg, provenance: "[LITERATURE] typical passenger-car corner unsprung mass 35-50 kg (Gillespie ch.5)"}
+  k_m: {value: 20000.0, units: N/m, provenance: "[DERIVED] f_b = 1.1 Hz: (2 pi 1.1)^2 * 400 ~ 19 kN/m, rounded"}
+  c_s: {value: 1500.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.27"}
+  k_t: {value: 180000.0, units: N/m, provenance: "[LITERATURE] passenger radial tire 160-220 kN/m (Gillespie ch.10)"}
   gate_mass: {value: 10.0, units: kg, provenance: "[ESTIMATE] housing+generator+flyweights per corner; open"}
 
 f150:

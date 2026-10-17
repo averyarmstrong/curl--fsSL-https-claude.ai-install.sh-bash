@@ -1,0 +1,16 @@
+# Experiment 003 — heavy corners: box truck, Class 8 tractor empty, Class 8
+# loaded (dual wheel station), MRAP; ISO A-D; 30/60 mph. Ranges, never points.
+# Gate scaled to the host: same k_b/k_m ratio, same 4 in travel, r and J as
+# exp 001/002 low-inertance point; c_gen re-swept because the host stiffness
+# and tire rate move the matched load by an order of magnitude.
+vehicles: [box_truck, class8_tractor_empty, class8_loaded, mrap_15t]
+classes: [A, B, C, D]
+speeds_mps: [13.41, 26.82]
+duration_s: 40.0
+seeds: [1, 2, 3]
+r: 300.0
+J: 0.0001
+k_b_over_k_m: 0.1198
+travel_m: 0.1016
+c_gen: [0.01, 0.03, 0.1, 0.3]
+m_f_kg: 20.0

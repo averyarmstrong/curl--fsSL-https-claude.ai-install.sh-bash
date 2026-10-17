@@ -1,0 +1,11 @@
+2026-10-17 02:37:57,388 INFO sweep: 111 cases (111 to run) on 4 workers
+2026-10-17 02:38:45,105 INFO 8/111 done, 0 errors, 48 s elapsed, ~614 s left
+2026-10-17 02:39:29,260 INFO 16/111 done, 0 errors, 92 s elapsed, ~545 s left
+2026-10-17 02:40:14,723 INFO 24/111 done, 0 errors, 137 s elapsed, ~498 s left
+2026-10-17 02:41:00,168 INFO 32/111 done, 0 errors, 183 s elapsed, ~451 s left
+2026-10-17 02:41:44,448 INFO 40/111 done, 0 errors, 227 s elapsed, ~403 s left
+2026-10-17 02:42:28,904 INFO 48/111 done, 0 errors, 272 s elapsed, ~356 s left
+2026-10-17 02:43:08,652 INFO 56/111 done, 0 errors, 311 s elapsed, ~306 s left
+2026-10-17 02:43:49,130 INFO 64/111 done, 0 errors, 352 s elapsed, ~258 s left
+2026-10-17 02:44:31,648 INFO 72/111 done, 0 errors, 394 s elapsed, ~214 s left
+2026-10-17 02:45:16,342 INFO 80/111 done, 0 errors, 439 s elapsed, ~170 s left

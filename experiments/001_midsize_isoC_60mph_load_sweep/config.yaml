@@ -1,0 +1,18 @@
+# Experiment 001 — mid-size car, ISO C, 60 mph: sweep the generator load.
+# Question: as the electrical load c_gen varies, what are phi, P_elec, P_net,
+# the ride and tire-load deltas vs the passive corner, and the hard-stop rate?
+# Because the reflected inertance J r^2 was found to lock the soft stage at the
+# gate-twin baseline (r = 1484, J = 3e-4 -> 660 kg), the load sweep is run at
+# four (r, J) corners so the load optimum is not hidden by one inertance choice.
+vehicle: midsize_car
+klass: C
+speed_mps: 26.82          # 60 mph
+duration_s: 40.0
+seeds: [1, 2, 3]
+c_gen: [0.0002, 0.0005, 0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1]
+r: [300.0, 1484.0]
+J: [0.00003, 0.0003]
+k_b_over_k_m: 0.1198      # prototype ratio 1/8.35
+travel_m: 0.1016          # 4 in, centred
+damper_span: full
+m_f_kg: 8.0

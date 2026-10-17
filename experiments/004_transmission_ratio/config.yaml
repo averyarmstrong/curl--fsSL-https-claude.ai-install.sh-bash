@@ -1,0 +1,14 @@
+# Experiment 004 — transmission ratio r [rad/m]. The patent fixes no mechanism.
+# Question: P_elec, phi, engagement rate, race speed vs lift-off, and the
+# reflected inertance J r^2 as r varies, at fixed J and re-matched load.
+vehicle: midsize_car
+klass: C
+speed_mps: 26.82
+duration_s: 40.0
+seeds: [1, 2, 3]
+r: [100.0, 200.0, 300.0, 500.0, 800.0, 1484.0, 3000.0]
+J: [0.00003, 0.0003]
+c_gen_scale: [0.3, 1.0, 3.0]     # c_gen = scale * c_ref * (300/r)^2 keeps the reflected damping c_gen r^2 comparable
+c_gen_ref: 0.01
+k_b_over_k_m: 0.1198
+travel_m: 0.1016

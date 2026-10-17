@@ -1,0 +1,15 @@
+# Experiment 005 — bias-spring rate ratio k_b/k_m x frame travel.
+# Question: the central design tension (01_physics §3.3): a soft stage with
+# 2-5 in of travel can only absorb a few percent of corner-load variation
+# before it binds. Map P_elec, phi, time-on-stop, stop contacts/km and ride
+# delta over the ratio and travel, at matched load.
+vehicle: midsize_car
+klass: C
+speed_mps: 26.82
+duration_s: 40.0
+seeds: [1, 2, 3]
+k_b_over_k_m: [0.05, 0.1198, 0.25, 0.5, 0.8]
+travel_m: [0.0508, 0.1016, 0.127]
+r: 300.0
+J: 0.00003
+c_gen: [0.003, 0.01, 0.03]
