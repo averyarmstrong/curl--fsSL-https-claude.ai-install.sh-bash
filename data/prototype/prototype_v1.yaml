@@ -1,0 +1,165 @@
+# Prototype v1 — every dimension, mass, rate and stroke found in the supplied
+# AKS materials, with its source.  Values not found are listed at the bottom
+# as OPEN and mirrored in docs/09_open_parameters.md.  Units are SI in `value`;
+# the original figure and unit are kept in `as_stated`.
+#
+# tag: measured  = from a supplier sheet or a physical measurement
+#      patent    = stated in US 12,409,695 B2
+#      derived   = computed here from measured/patent values (formula given)
+#      estimate  = engineering estimate, flagged open
+#
+# Sources
+#   [DR]  "AKS — Diligence Response for Mohan" (Aug 2026 draft), quoting Ebsco
+#         Spring Co. sheets EB-7233 / EB-7234 Rev 4, 2026-07-30 (sheets
+#         themselves not supplied)
+#   [PAT] US 12,409,695 B2, column:line
+#   [POC] "AKS Proof of Concept & Next Steps" (Aug 2026)
+#   [FIG] "One iteration of the Armstrong Kinetic Regenerative Suspension"
+#         Fusion render and 3 drawings copy.pdf (topology only; no dimensions)
+
+meta:
+  name: AKS bench article v1 (Ebsco spring pair in machined housing)
+  status: assembled housing, springs delivered; not yet instrumented or run [POC]
+  date_of_record: "2026-10-17"
+
+springs:
+  bias_spring:
+    part: EB-7234
+    rate:
+      value: 333.6
+      units: N/m
+      as_stated: "1.905 lbf/in"
+      tag: measured
+      source: "[DR] §2 table"
+    wire_diameter:
+      value: 4.75e-3
+      units: m
+      as_stated: "0.187 in, 316 SS"
+      tag: measured
+      source: "[DR] §2 table"
+    free_length:
+      value: 0.1397
+      units: m
+      as_stated: "5.50 in"
+      tag: measured
+      source: "[DR] §2 table"
+    travel_to_solid:
+      value: 0.08270
+      units: m
+      as_stated: "3.256 in"
+      tag: measured
+      source: "[DR] §2 table"
+    load_at_solid:
+      value: 27.6
+      units: N
+      as_stated: "6.2 lbf"
+      tag: measured
+      source: "[DR] §2 table (check: 1.905 lbf/in x 3.256 in = 6.20 lbf)"
+    energy_at_solid:
+      value: 1.14
+      units: J
+      tag: derived
+      source: "0.5 * 333.6 N/m * (0.0827 m)^2 = 1.141 J; matches [DR]"
+  main_spring:
+    part: EB-7233
+    rate:
+      value: 2785.0
+      units: N/m
+      as_stated: "15.902 lbf/in"
+      tag: measured
+      source: "[DR] §2 table"
+    wire_diameter:
+      value: 6.35e-3
+      units: m
+      as_stated: "0.250 in, 316 SS"
+      tag: measured
+      source: "[DR] §2 table"
+    free_length:
+      value: 0.1778
+      units: m
+      as_stated: "7.00 in"
+      tag: measured
+      source: "[DR] §2 table"
+    travel_to_solid:
+      value: 0.1397
+      units: m
+      as_stated: "5.50 in"
+      tag: measured
+      source: "[DR] §2 table"
+    load_at_solid:
+      value: 389.2
+      units: N
+      as_stated: "87.5 lbf"
+      tag: measured
+      source: "[DR] §2 table (check: 15.902 x 5.50 = 87.46 lbf)"
+    energy_at_solid:
+      value: 27.2
+      units: J
+      tag: derived
+      source: "0.5 * 2785 * 0.1397^2 = 27.18 J; matches [DR]"
+  rate_ratio_main_over_bias:
+    value: 8.348
+    units: "-"
+    tag: derived
+    source: "15.902 / 1.905"
+  static_energy_partition_bias:
+    value: 0.893
+    units: "-"
+    tag: derived
+    source: "k_main/(k_main+k_bias) — fraction of STORED elastic energy in the bias spring at common force. Not a harvest fraction (see docs/01_physics.md §3)."
+  bench_preload:
+    value: 0.0508
+    units: m
+    as_stated: "2.0 in preload, 3.8 lbf standing force"
+    tag: planned
+    source: "[DR] §2 bench prediction"
+  bench_working_stroke_after_preload:
+    value: 0.0319
+    units: m
+    as_stated: "3.256 - 2.0 = 1.256 in to solid"
+    tag: derived
+    source: "travel_to_solid - bench_preload"
+
+frame:
+  plates:
+    count: 3
+    tag: patent
+    source: "[PAT] 5:9-20, FIG. 2 (109, 110, 111)"
+  guide_bars_in_sleeves:
+    tag: patent
+    source: "[PAT] 5:40-47 (112, 113)"
+  soft_stage_stroke_design_intent:
+    value_range: [0.0508, 0.127]
+    units: m
+    as_stated: "2 to 5 inches"
+    tag: patent
+    source: "[PAT] 3:20-27, 6:65-7:3"
+  height_h: {tag: OPEN, source: "[PAT] FIG. 2 shows h but gives no value; housing drawings not supplied"}
+  plate_dimensions: {tag: OPEN, source: "Housing plate 1/2.pdf not found in Drive or uploads"}
+  moving_plate_mass: {tag: OPEN}
+
+drive:
+  drive_rod_to_shaft_transmission:
+    tag: OPEN
+    source: "[PAT] 5:67-6:4 says 'one-way spiral gears or ... sprag clutches'; no lead or ratio given. Modelled as ratio r [rad/m], swept."
+  clutches:
+    count: 2
+    arrangement: opposed, one engages on collapse, one on expansion
+    tag: patent
+    source: "[PAT] 6:3-13, claims 4/13"
+    part_numbers: {tag: OPEN}
+  flyweights:
+    tag: patent
+    source: "[PAT] 6:14-20, claims 8/17"
+    inertia: {tag: OPEN}
+  generator:
+    type_stated: "generator or alternator; PM generator intended [DR] §3"
+    part: {tag: OPEN, source: "PHINIA custom unit under discussion [POC]"}
+
+housing:
+  machined_by: "4D Machining (photo 'First housing from 4D Machining.jpeg')"
+  tag: built
+  dimensions: {tag: OPEN}
+
+measured_performance:
+  note: "No AKS power measurement exists in any supplied document as of 2026-10-17. [POC] schedules instrumentation Aug-Oct 2026. The '14 W per corner early prototype data' referenced in the kickoff brief was not found; it is NOT recorded here."
