@@ -41,8 +41,8 @@ corner on ISO C. Vehicle weight enters only through tire stiffness.
 - [x] Experiment 001 first pass: stock damper → φ < 0.1, P_net < 0
 - [x] Experiments 001–006 run (1,794 cases, 0 errors), READMEs written,
       findings F1–F7, ledger, sizing report, linear frontier, README table
-- [ ] Experiment 007 Monte Carlo (1,152 cases) — launched 03:53; write its
-      README and fold bands into README/F5 when done
+- [x] Experiment 007 Monte Carlo (1,152 live cases; Class 8 load range
+      corrected and re-run), README, bands in F5 and ledger
 - [ ] Clutch endurance leg T6 and bench data when hardware runs
 - [ ] Half-car (pitch) model; measured-profile ingest from FHWA LTPP
 - [x] numba RHS (3.5×); sweeps default to it

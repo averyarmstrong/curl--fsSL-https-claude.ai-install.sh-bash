@@ -19,8 +19,8 @@ load range (c_eq 250–800 N·s/m) to the Class 8 station, whose optimum is
 ~9,000 N·s/m (experiment 003). Its φ came out 0.026 instead of 0.13 and the
 Spearman table shows P_elec pinned to c_gen (+0.80) — a grid-edge artefact,
 not physics. The config now carries a per-vehicle load range and the Class
-8 rows were re-run (`results/RESULTS.md` is the regenerated table); the
-first-pass table is in git history (commit "experiment 007 first pass").
+8 rows were re-run (`results/RESULTS.md` is the regenerated table, superseded rows filtered
+by case id); the first-pass table is in git history (commit 45c7db5).
 
 **Answer — bands (5 % / median / 95 %), 60 mph** (`results/bands.csv`).
 
@@ -35,7 +35,9 @@ first-pass table is in git history (commit "experiment 007 first pass").
 | HMMWV | B | 4.2 / 6.4 / 8.4 | 0.094 | −66 / −46 / −23 | −12 % | +6 % | 0 |
 | | C | 17 / 25 / 34 | 0.094 | −72 / −45 / −13 | −12 % | +6 % | 0.01 |
 | | D | 62 / 96 / 125 | 0.089 | −112 / −32 / +30 | −12 % | +6 % | 0.14 |
-| Class 8 loaded (dual) | B/C/D | *re-run in progress; see RESULTS.md* | | | | | |
+| Class 8 loaded (dual) | B | 31 / 40 / 44 | 0.130 | −83 / −48 / −13 | −12 % | −2 % | 0 |
+| | C | 125 / 159 / 176 | 0.130 | −16 / +36 / +85 | −12 % | −1 % | 0 |
+| | D | 475 / 624 / 703 | 0.129 | +204 / +368 / +503 | −12 % | −1 % | 0.09 |
 
 1. **The bands are a factor of ~2 wide in P_elec** and are set by the
    Gate's own parasitics, not by the road: Spearman rank correlation of
@@ -60,5 +62,6 @@ load range is right for the light vehicles and was wrong for the Class 8
 station in the first pass (now corrected).
 
 **Ledger.** Mid-size car ISO C: 5.6–12.3 W (median 9.2); F-150 9.4–20 W
-(14); HMMWV 17–34 W (25); P_net −45…−13 / −55…−14 / −72…−13 W. Tag
+(14); HMMWV 17–34 W (25); Class 8 loaded station 125–176 W (159), P_net
+−16…+85 W; ISO D 475–703 W, P_net +204…+503 W. Tag
 modeled, exp 007, 2026-10-17. Figure `results/fig_bands.png`.

@@ -65,6 +65,9 @@ def cases():
 
 
 def analyse(df):
+    from aks_lab.sweeps.cases import case_id
+    live = {case_id(c) for c in cases()}
+    df = df[df["case_id"].isin(live)]          # drop rows superseded by a config correction
     g = attach_deltas(df)
     rows = []
     for (v, k), d in g.groupby(["vehicle", "klass"]):

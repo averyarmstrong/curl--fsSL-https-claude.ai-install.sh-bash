@@ -49,3 +49,5 @@ experiment's `results/RESULTS.md` for the full tables.)*
 | 9.4 / 14.0 / 20.0 ; 17 / 25 / 34 | W per corner | 5–95 % | F-150 ; HMMWV, ISO C 60 mph, same design point | modeled | exp 007 | 2026-10-17 |
 | −45 / −31 / −13 | W net per corner | 5–95 % | midsize ISO C incl. 6–18 kg hardware | modeled | exp 007 | 2026-10-17 |
 | −0.64 / −0.45 / +0.35 | Spearman ρ with P_elec | — | guide friction / overrun drag / generator efficiency (midsize) | modeled | exp 007 | 2026-10-17 |
+| 125 / 159 / 176 ; 475 / 624 / 703 | W per dual station | 5–95 % | Class 8 loaded ISO C ; D, 60 mph, damper ×0.75, open params drawn | modeled | exp 007 (corrected load range) | 2026-10-17 |
+| −16 / +36 / +85 ; +204 / +368 / +503 | W net per station | 5–95 % | same, incl. 15–45 kg hardware | modeled | exp 007 | 2026-10-17 |
