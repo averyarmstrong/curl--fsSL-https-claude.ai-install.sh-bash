@@ -8,6 +8,7 @@ re-run.  Keys:
   m_f: moving plate mass (kg)           damper_span: "full" | "main"
   delta_m: added hardware mass (kg)     tag: free text
   c_s_scale: OEM damper scale on the Gate corner (baseline keeps 1.0)
+  fast: use the numba model when available (default True)
 """
 
 from __future__ import annotations
@@ -23,6 +24,11 @@ from ..metrics import energy_metrics, handling_metrics, p_net, ride_metrics, siz
 from ..params import gate_from_yaml
 from ..roads import iso8608_profile
 from ..vehicles import PassiveQuarterCar, QuarterCarGate, corner
+
+try:  # numba-compiled RHS, equivalent to the reference to 1e-4 (tests/test_fast_equivalence.py)
+    from ..vehicles.quarter_car_fast import QuarterCarGateFast as _FastModel
+except Exception:  # noqa: BLE001
+    _FastModel = None
 
 
 def case_id(case: dict) -> str:
@@ -54,9 +60,11 @@ def run_case(case: dict) -> dict:
             if cs_scale != 1.0:   # the Gate corner may carry a smaller OEM damper; the baseline keeps stock
                 from dataclasses import replace
                 c = replace(c, c_s=c.c_s * cs_scale)
-            res = QuarterCarGate(c, g, road, m_f=case.get("m_f", 8.0),
-                                 damper_span=case.get("damper_span", "full")).simulate(case["duration"])
+            model = _FastModel if (_FastModel is not None and case.get("fast", True)) else QuarterCarGate
+            res = model(c, g, road, m_f=case.get("m_f", 8.0),
+                        damper_span=case.get("damper_span", "full")).simulate(case["duration"])
             row["is_gate"] = True
+            row["model"] = model.__name__
             row.update({f"gate_{k}": v for k, v in g.describe().items() if k != "generator"})
             row["c_gen"] = g.gen.c_gen
             row["eta_gen"] = g.gen.eta
