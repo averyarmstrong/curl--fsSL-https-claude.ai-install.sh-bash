@@ -80,6 +80,13 @@ corner on ISO C. Vehicle weight enters only through tire stiffness.
 
 ## Process
 
+- **Surrogate first.** Before any sweep, run `validate.analytic.linear_gate_power` /
+  `optimise_linear_gate` (milliseconds) to set the c_gen, c_s_scale and r/J grids;
+  then confirm with the hybrid model. Today's first 001 pass burned 10 min of
+  4 cores at r = 1484 that the surrogate would have ruled out.
+- Heavy stations need their own load grid (optimum c_gen ≈ 0.1–0.3 at r = 300).
+- `experiments/run_all.sh` chains everything; `make report` regenerates.
+
 Conventional commits, one per numbered step, message states the question
 answered. Push to `claude/modest-hamilton-c7f0g9`. `make test && make lint`
 before every commit.
