@@ -203,3 +203,34 @@ NSTATE; the numba model and the 1e-4 equivalence test still pass. Reference
 model only for body-force / one-sided cases (~5 s per simulated 40 s).
 Outcome: wind ≤ 2 W per corner at 400 N RMS per vehicle; powertrain 0;
 lift-off −1 % (D) / −12 % (E) of supply; gravity identical to 1e-6.
+
+## 2026-10-17 — Session 4: "we break the spring's symmetry"
+
+**Question.** Avery asked whether the drawings had actually been read and
+for a first-principles statement of the symmetry breaking. They had not
+been viewed, only OCR'd. Downloaded and viewed `3 drawings copy.pdf`, the
+Fusion two-stage collapse GIF (52 frames) and the "One iteration" render.
+
+**What the drawings changed.** Nothing in the model, one thing in the
+reading: the generator body hangs from the lowest frame plate with the rod
+anchored above, so the generator stroke is the bias-stage deflection
+`x_b`. That is what `QuarterCarGate` already does. No dimension anywhere.
+The current Fusion iteration has two bias stages in series; the model's
+single `k_b` is their series rate.
+
+**Derivation.** `docs/03_symmetry_breaking_first_principles.md`. A spring
+is time-reversal symmetric (zero loop area). The sprag pair is a kinematic
+inequality `ω ≥ ±r ẋ_b`, so the rotor sees `|ẋ_b|`, which is not
+time-reversal symmetric; the generator force then opposes the rod on both
+strokes and the loop acquires area `π c_eq ω A²`. Force continuity across
+the frame plate (`k_m x_m = k_b x_b + F_gen`) shows the area is work done
+through the main spring, i.e. by the chassis–axle motion, i.e. by the road.
+
+**Numbers (bench springs, 1 in at 3 Hz).** Spring stores 0.108 J per cycle
+and returns it. Rectified loop at c_eq 100 / 500 N·s/m: 3.8 / 19.1 J per
+cycle = 11.5 / 57.3 W, peak rod force 48 / 239 N. Flywheel at J r² = 10 kg:
+57.5 W. Ledger closes to 1e-10. Pinned by `tests/test_symmetry_breaking.py`.
+
+**Ugly thing.** The 1 kW figure Avery used needs a 4,200 N peak rod force
+at 1 in / 3 Hz, i.e. the whole static corner load of a mid-size car swinging
+in phase with the bias-stage velocity. That is in the doc (§7) and in F5/F7.

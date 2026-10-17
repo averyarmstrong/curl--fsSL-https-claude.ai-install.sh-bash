@@ -311,9 +311,21 @@ contrast with '695 (series, rectified). It is not cited on '695.
 *.jpg`** were not present in the uploads or in Drive (searched by title and
 full text). The ISO 8608 synthesis in the gate-twin repo is of the same form
 the brief describes and is kept after verification. The housing-plate
-dimensions are therefore **open** (`09_open_parameters.md`); the Fusion
-render and `3 drawings copy.pdf` (FIG. 8 markup, "bias spring", "coil spr",
-"CAR Axle") confirm topology only.
+dimensions are therefore **open** (`09_open_parameters.md`).
+
+**Drawings viewed in full (session 4):** `3 drawings copy.pdf` (two hand
+sketches of the three-plate frame with the red bias stage and a rod
+extending below; an inset of the rod with a sprag at each end of the
+generator body and flyweight cross-bars outboard; FIG. 8 hand-coloured with
+"bias spring", "coil spring", "CAR Axle"), `AKS_Fusion_Collapse_TwoStage_FINAL.gif`
+(52 frames: the bias stage collapses in two steps, top plate to middle
+plate first, then the lower red stage; the spherical generator body hangs
+under the lowest frame plate with the rod running down the axis of the
+main coil to the base plate) and `One iteration….pdf` (the same Fusion
+model, static). They fix topology — the generator rides on the main-spring
+seat, the rod is chassis-anchored, so the harvested stroke is the
+bias-stage deflection — and no dimension. First-principles treatment in
+`03_symmetry_breaking_first_principles.md`.
 
 ---
 

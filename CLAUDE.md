@@ -5,7 +5,8 @@ Measurable, reproducible models of the Gate (U.S. 12,409,695 B2 only).
 Foundation principle: "Our ambition can be unlimited. Our claims must be
 measurable." Repo stays PRIVATE.
 
-Read `docs/01_physics.md` (normative derivations), `docs/08_findings…`
+Read `docs/01_physics.md` (normative derivations), `docs/03_symmetry_breaking…`
+(why the sprags make a spring yield net work, and where it comes from), `docs/08_findings…`
 (what already contradicts public AKS statements) and `docs/LAB_NOTEBOOK.md`
 before touching physics code. `docs/00_intake.md` says what every prior AKS
 document establishes and leaves open.
@@ -44,6 +45,7 @@ corner on ISO C. Vehicle weight enters only through tire stiffness.
 - [x] Experiment 007 Monte Carlo (1,152 live cases; Class 8 load range
       corrected and re-run), README, bands in F5 and ledger
 - [x] Session 3: body-force channel (E_body), one-sided tire, gravity test, exp 008, F8
+- [x] Session 4: drawings viewed; `docs/03_symmetry_breaking_first_principles.md` + test (loop area = energy; spring is storage)
 - [ ] Clutch endurance leg T6 and bench data when hardware runs
 - [ ] Half-car (pitch) model; measured-profile ingest from FHWA LTPP
 - [x] numba RHS (3.5×); sweeps default to it
