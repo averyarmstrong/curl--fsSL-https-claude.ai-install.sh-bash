@@ -8,7 +8,7 @@ import yaml
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2] / "src"))
 from aks_lab.sweeps.runner import run_sweep  # noqa: E402
-from aks_lab.validate.analytic import mean_road_power  # noqa: E402
+from aks_lab.validate.analytic import linear_gate_power, mean_road_power  # noqa: E402
 from aks_lab.vehicles import corner  # noqa: E402
 from aks_lab.viz.plots import md_table, plot_band, plt, save  # noqa: E402
 
@@ -55,6 +55,17 @@ def analyse(df: pd.DataFrame):
     g["config"] = g.apply(lambda r: f"r={r.gate_r:.0f}, J={r.gate_J:.0e} (Jr={r.Jr:.0f} kg), damper x{r.c_s_scale:g}", axis=1)
     c, gm = corner(CFG["vehicle"])
     exact = mean_road_power(c, CFG["klass"], CFG["speed_mps"])
+    # exact linear surrogate for every nonlinear row (frame stage = k_b || c_gen r^2 || J r^2 inerter)
+    g["P_elec_linear"] = [linear_gate_power(c, CFG["klass"], CFG["speed_mps"], r.gate_k_b, r.c_gen * r.gate_r ** 2,
+                                            m_f=CFG["m_f_kg"], b_inert=r.gate_J * r.gate_r ** 2, c_s_scale=r.c_s_scale,
+                                            c_b=r.gate_c_b, eta=r.eta_gen)["P_elec"] for r in g.itertuples()]
+    fig, ax = plt.subplots(figsize=(4.8, 4.5))
+    for cfg, d in g.groupby("config"):
+        ax.scatter(d["P_elec_linear"], d["P_elec"], s=12, label=cfg)
+    lim = [0, max(g["P_elec"].max(), g["P_elec_linear"].max()) * 1.05]
+    ax.plot(lim, lim, "k--", lw=0.8)
+    ax.set_xlabel("linear surrogate P_elec [W]"); ax.set_ylabel("nonlinear simulation P_elec [W]"); ax.legend(fontsize=5)
+    save(fig, OUT / "fig_surrogate_vs_sim.png", CFG, "exp001 surrogate check")
     fig, axs = plt.subplots(2, 3, figsize=(13, 7))
     for ax, y in zip(axs.flat, ["P_elec", "phi", "P_net", "d_a_w_rms_pct", "d_dtl_rms_frac_pct", "t_stop_frac"]):
         plot_band(ax, g, "c_gen", y, group="config", logx=True)
@@ -81,6 +92,7 @@ def analyse(df: pd.DataFrame):
                  damper_share=("damper_share", "median"), d_a_w_pct=("d_a_w_rms_pct", "median"),
                  d_dtl_pct=("d_dtl_rms_frac_pct", "median"), t_stop=("t_stop_frac", "median"),
                  x_b_rms=("x_b_rms", "median"), rpm=("rpm_mean", "median"),
+                 P_elec_linear=("P_elec_linear", "median"), engaged=("engaged_frac", "median"),
                  closure=("closure", "max"))
             .reset_index())
     summ.to_csv(OUT / "summary.csv", index=False)
@@ -90,15 +102,15 @@ def analyse(df: pd.DataFrame):
              f"{pas['P_damper'].mean():.1f} W (sim, mean of {len(pas)} seeds); passive W_k accel "
              f"{pas['a_w_rms'].mean():.3f} m/s², DTL {pas['dtl_rms_frac'].mean():.3f}.", "",
              "### Best load per (r, J) configuration", "",
-             md_table(best, ["config", "c_gen", "P_elec", "P_elec_lo", "P_elec_hi", "phi", "P_net", "damper_share",
-                             "d_a_w_pct", "d_dtl_pct", "t_stop", "x_b_rms", "rpm", "closure"],
-                      {"c_gen": "{:.4g}", "P_elec": "{:.1f}", "P_elec_lo": "{:.1f}", "P_elec_hi": "{:.1f}",
-                       "phi": "{:.3f}", "P_net": "{:.1f}", "d_a_w_pct": "{:+.1f}", "d_dtl_pct": "{:+.1f}",
+             md_table(best, ["config", "c_gen", "P_elec", "P_elec_lo", "P_elec_hi", "P_elec_linear", "phi", "P_net", "damper_share",
+                             "d_a_w_pct", "d_dtl_pct", "t_stop", "x_b_rms", "rpm", "engaged", "closure"],
+                      {"c_gen": "{:.4g}", "P_elec": "{:.1f}", "P_elec_lo": "{:.1f}", "P_elec_hi": "{:.1f}", "P_elec_linear": "{:.1f}",
+                       "phi": "{:.3f}", "P_net": "{:.1f}", "d_a_w_pct": "{:+.1f}", "d_dtl_pct": "{:+.1f}", "engaged": "{:.2f}",
                        "closure": "{:.1e}"}),
              "", "### Full sweep (median over seeds)", "",
-             md_table(summ, ["config", "c_gen", "P_elec", "phi", "P_net", "d_a_w_pct", "d_dtl_pct", "t_stop", "rpm"],
-                      {"c_gen": "{:.4g}", "P_elec": "{:.1f}", "phi": "{:.3f}", "P_net": "{:.1f}",
-                       "d_a_w_pct": "{:+.1f}", "d_dtl_pct": "{:+.1f}"})]
+             md_table(summ, ["config", "c_gen", "P_elec", "P_elec_linear", "phi", "P_net", "d_a_w_pct", "d_dtl_pct", "t_stop", "rpm", "engaged"],
+                      {"c_gen": "{:.4g}", "P_elec": "{:.1f}", "P_elec_linear": "{:.1f}", "phi": "{:.3f}", "P_net": "{:.1f}",
+                       "d_a_w_pct": "{:+.1f}", "d_dtl_pct": "{:+.1f}", "engaged": "{:.2f}"})]
     (OUT / "RESULTS.md").write_text("\n".join(lines) + "\n")
     print("\n".join(lines[:8]))
     return summ

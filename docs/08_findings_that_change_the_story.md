@@ -184,4 +184,36 @@ constraint in this model.
 
 ---
 
-*(Entries F6+ are appended as the experiments complete.)*
+## F6. Clutch life has no literature basis — the first test must be an endurance test
+
+**What AKS says.** Pitch deck: "two clutches, a flywheel, a generator;
+soldiers can service it with hand tools." Diligence Response: sprag
+rectifier efficiency 96–98 %. Military Brief: rating basis 1e6 cycles →
+139 h at 2 Hz (its own derived figure).
+
+**What the repo finds.** (a) The model's engagement rate is ≈ 170 per km
+per clutch set on ISO C at 60 mph (both sets, symmetric), i.e. 1.7×10⁵
+indexing cycles per set per 1000 km, 10⁶ per ~6000 km — at 15 mph on rough
+ground the per-km count rises. (b) No sprag or roller freewheel
+manufacturer publishes a cycles-to-failure basis for its torque rating;
+practice is nominal torque × an indexing service factor (2–4, stepped at
+150 strokes/min; +50 % with vibration), with fatigue micro-chipping named
+as the indexing failure mode (GMN). (c) No endurance or failure data exist
+for any mechanical-motion-rectifier harvester in fifteen years of
+publications; the one railcar field program reports only "no significant
+problems" at low power. (d) The "1e6 cycles" basis in the Military Brief is
+**not verified** by any catalog text found.
+
+**How sure.** The engagement rate is a robust model output (it is set by
+the road's zero-crossing rate, not by the load). The absence of life data
+is an absence of evidence after a targeted search of ~40 primary hosts by
+snippet; full catalog PDFs were not readable from this environment.
+
+**What to say instead.** Nothing about service life until measured. Add a
+clutch-only endurance leg to the bench (T6 in `05_bench_protocol.md`):
+cycle the rectifier at 2–3 Hz at the modeled T_c,p99 for ≥ 10⁶
+engagements, monitor drag torque and backlash, and publish the hours.
+
+---
+
+*(Entries F7+ are appended as the experiments complete.)*

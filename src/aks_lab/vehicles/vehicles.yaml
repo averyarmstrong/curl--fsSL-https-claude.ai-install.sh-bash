@@ -82,3 +82,12 @@ hmmwv:
   c_s: {value: 4700.0, units: N.s/m, provenance: "[DERIVED] zeta = 0.33"}
   k_t: {value: 400000.0, units: N/m, provenance: "[LITERATURE] 37x12.5R16.5 at ~250 kPa ~350-450 kN/m"}
   gate_mass: {value: 15.0, units: kg, provenance: "[ESTIMATE] open"}
+
+hmmwv_mr_paper:
+  note: "HMMWV quarter-car parameters as quoted (single secondary source: an MR-damper HMMWV study, parameter table seen only in a search snippet; data/literature/research_round2_*.md §2). Kept beside our derived 'hmmwv' set; body frequency 2.1 Hz, zeta ~1.1 on extension — treat as an upper-stiffness bound until the paper is read."
+  m_s: {value: 905.0, units: kg, provenance: "[LITERATURE-S] MR-damper HMMWV quarter-car study (snippet)"}
+  m_u: {value: 181.0, units: kg, provenance: "[LITERATURE-S] same"}
+  k_m: {value: 163300.0, units: N/m, provenance: "[LITERATURE-S] same; suspension stiffness"}
+  c_s: {value: 27160.0, units: N.s/m, provenance: "[LITERATURE-S] same; OEM damper extension coefficient (compression not given)"}
+  k_t: {value: 463800.0, units: N/m, provenance: "[LITERATURE-S] same; ambiguous whether per tire or total of four springs"}
+  gate_mass: {value: 15.0, units: kg, provenance: "[ESTIMATE] open"}

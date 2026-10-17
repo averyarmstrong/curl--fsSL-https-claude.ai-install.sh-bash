@@ -30,3 +30,11 @@
 2026-10-17 03:06:38,695 INFO 96/162 done, 0 errors, 542 s elapsed, ~372 s left
 2026-10-17 03:07:29,759 INFO 104/162 done, 0 errors, 593 s elapsed, ~331 s left
 2026-10-17 03:08:14,939 INFO 112/162 done, 0 errors, 638 s elapsed, ~285 s left
+2026-10-17 03:09:01,173 INFO 120/162 done, 0 errors, 684 s elapsed, ~239 s left
+2026-10-17 03:09:46,115 INFO 128/162 done, 0 errors, 729 s elapsed, ~194 s left
+2026-10-17 03:10:33,899 INFO 136/162 done, 0 errors, 777 s elapsed, ~149 s left
+2026-10-17 03:11:16,770 INFO 144/162 done, 0 errors, 820 s elapsed, ~102 s left
+2026-10-17 03:11:59,416 INFO 152/162 done, 0 errors, 862 s elapsed, ~57 s left
+2026-10-17 03:12:42,269 INFO 160/162 done, 0 errors, 905 s elapsed, ~11 s left
+2026-10-17 03:13:04,085 INFO 162/162 done, 0 errors, 927 s elapsed, ~0 s left
+2026-10-17 03:13:04,141 INFO sweep finished: 273 rows, 0 errors, 927 s

@@ -40,6 +40,7 @@ proposed 2.0 in preload; keep it, and record the actual standing force).
 | T3 | 6, 12.7 mm | 1, 2, 3 Hz | 5 loads | **power curve**: P_in, P_elec vs load; confirms full-wave (both clutches engage; ω never negative) |
 | T4 | 12.7 mm | 2.5 Hz | best load | 30-min run: temperature drift, engagement count, any clutch chatter |
 | T5 | stroke to the stop | 1 Hz | best load | stop contact: force spike, loss per contact |
+| **T6** | 6 mm | 2.5 Hz | best load | **clutch endurance**: ≥ 10⁶ engagements per set (≈ 110 h); log drag torque (T0 repeat every 10⁵ cycles), backlash angle, engagement count A/B, housing temperature; stop criteria: drag torque ×2, backlash > 0.5°, or any slip event (F6) |
 
 Amplitudes stay ≥ 20% below the coil-bind margin (3.256 − 2.0 = 1.256 in
 after preload) except in T5.
