@@ -183,3 +183,9 @@ validate against closed forms and the Zuo baseline, run experiments
   conservative; widen the grid next run. The linear surrogate's optimum
   (c_eq 300–500 for a car) scales with corner impedance for trucks; use it
   to set grids first.
+- **Tire-damping check (04:05).** c_t 0/300/1000 N·s/m, midsize ISO C 60 mph:
+  P_road 121/179/303 W (the tire dashpot eats band-limited white velocity
+  up to the 76 Hz synthesis edge), P_elec 9.5/8.8/7.8 W. The extra is tire
+  heat, not suspension budget. Ledger note: the passive model books tire
+  loss under E_genloss (no machine present) — rename to E_tire if c_t is
+  ever used in a sweep; all experiments ran c_t = 0.

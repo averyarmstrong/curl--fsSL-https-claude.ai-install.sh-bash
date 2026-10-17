@@ -347,9 +347,15 @@ Consequences:
    tire stiffness. "P ∝ W" is not a law of this system; "P ∝ G_d V k_t" is.
 3. **Road class and speed are the levers.** One ISO class is a factor of
    four; doubling speed doubles the power.
-4. **Tire damping and enveloping** (not in the theorem) are the only places
-   where the device upstream could change the mean input, and they act to
-   *reduce* it at high frequency. The model exposes c_t as a parameter.
+4. **Tire damping** (not in the theorem) raises the power the road
+   delivers, because a dashpot at the contact patch absorbs the white
+   high-frequency velocity directly — but that increment is dissipated in
+   the tire, not passed to the suspension. Direct check (mid-size car,
+   ISO C, 60 mph, 2 seeds): c_t = 0 / 300 / 1000 N·s/m gives P_road = 121 /
+   179 / 303 W while the Gate's electrical output falls 9.5 → 8.8 → 7.8 W.
+   The harvestable supply therefore stays at or below ¼ k_t W_v; φ is
+   defined with c_t = 0 so that its denominator is the power that actually
+   reaches the suspension (`LAB_NOTEBOOK.md`, session 2 close-out).
 
 **Reactive power is not harvestable.** The instantaneous spring power
 k_m r_m ṙ_m has a large amplitude (of order the dissipated power divided by

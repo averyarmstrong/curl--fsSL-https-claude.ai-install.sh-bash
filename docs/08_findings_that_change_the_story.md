@@ -41,11 +41,14 @@ the two cannot be confused again. The static 89.3% partition is a statement
 about where elastic energy *sits*, not about what can be *removed*; the
 removable fraction is φ, a dynamic quantity that the experiments compute.
 
-**How sure.** Certain for the stated model (it is an identity). The only
-physical escape hatches are tire damping and enveloping, both of which
-*reduce* the high-frequency supply, and a road spectrum that is not ∝ n⁻²
-(ISO 8608 allows w ≠ 2; real roads deviate). Neither opens a reservoir
-"several times" larger.
+**How sure.** Certain for the stated model (it is an identity). Tire
+damping was checked directly: it increases the power the road delivers
+(+50 % at c_t = 300 N·s/m, +150 % at 1000) but the increase is dissipated
+in the tire at high frequency and the Gate's output *falls* (9.5 → 7.8 W).
+Enveloping reduces the high-frequency supply further. A road spectrum that
+is not ∝ n⁻² (ISO 8608 allows w ≠ 2) changes the number, not the
+conclusion. Nothing opens a reservoir "several times" larger for the
+suspension.
 
 **What to say instead.** "The road delivers a fixed budget of order
 100 W per passenger-car corner on an average road at highway speed, and
