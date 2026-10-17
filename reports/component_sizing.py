@@ -137,9 +137,10 @@ def main():
         out += ["## 5. Race speed vs sprag lift-off across the ratio sweep (exp 004)", "",
                 tbl(agg, ["gate_J", "gate_r", "Jr", "P_elec", "race_rpm_max", "margin"],
                     {"gate_J": "{:.0e}", "gate_r": "{:.0f}", "Jr": "{:.1f}", "P_elec": "{:.1f}", "race_rpm_max": "{:.0f}", "margin": "{:.0f}"}),
-                "", "Reading: with the sprags on the high-speed side of the ratio, r above ~800 rad/m puts peak race "
-                "speed above catalog lift-off on class C at 60 mph; put the clutches on the low-speed side and gear "
-                "up after rectification, or confirm a lift-off-free sprag type (GMN FE 8000 class).", ""]
+                "", "Reading: with the sprags on the race at ratio r, the PEAK race speed exceeds the 1200 rpm catalog "
+                "lift-off mid-value for every r above ~200 rad/m on class C at 60 mph (95th percentiles stay below it up to "
+                "r ~ 500); class D exceeds it everywhere (exp 002/003). Put the clutches on the slow side of any step-up, "
+                "or specify a lift-off-free sprag type (GMN FE 8000 class), and verify the chosen part's own limit.", ""]
     OUT.write_text("\n".join(out) + "\n")
     print(f"wrote {OUT}")
 

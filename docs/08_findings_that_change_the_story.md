@@ -235,4 +235,37 @@ engagements, monitor drag torque and backlash, and publish the hours.
 
 ---
 
-*(Entries F7+ are appended as the experiments complete.)*
+## F7. The kilowatt story is real — on rough roads and heavy stations, with the "average roads" label removed
+
+**What AKS says.** Deck slide 10: "Loaded Class-8 semi: ~5 kW average ·
+10–16 kW rough-road peaks"; "Full-size pickup: ~350 W average roads."
+Military Brief: 60–300 W per corner on rough ground, 0.25–1.2 kW per
+vehicle, near zero on pavement.
+
+**What the repo finds (experiments 002–003, 952 runs).** Per wheel station
+at 60 mph with the stock damper: loaded Class 8 dual station 153 W on
+ISO C, 614 W on ISO D; MRAP 95 / 381 W; HMMWV 29 / 117 W; F-150 15 / 59 W.
+Per vehicle (9 dual stations) a loaded tractor-trailer harvests ~1.4 kW
+gross on ISO C and ~5.5 kW on ISO D; with damping reduced to 25 % (tire
+load +19 %) 3.3 / 13 kW. Net of hardware mass, heavy stations are positive
+from ISO C at highway speed; the pickup is positive only on ISO D (+3 W at
+stock damping, +42 W with damping cut).
+
+**How sure.** Model, with literature-typical heavy-vehicle parameters and
+the open hardware mass; ±3 % seed scatter; the exact theorem fixes the
+supply (1.2 kW per dual station on ISO C at 60 mph), so the uncertainty is
+in φ (0.11–0.13 stock, 0.28–0.33 reduced), the parasitics (±35 %, F6
+tornado) and the mass.
+
+**What to say instead.** "Hundreds of watts per wheel station on average
+highways, around a kilowatt per station on rough roads, for heavy trucks
+and tactical vehicles; a few kilowatts per vehicle on the roads where
+those vehicles actually run. For passenger cars, tens of watts per corner
+and roughly break-even after the hardware is carried." The Military
+Brief's framing (engine-off watts into the anti-idle battery, rough
+ground, 0.25–1.2 kW per vehicle) is consistent with the model; the deck's
+is not.
+
+---
+
+*(Entries F8+ are appended as the experiments complete.)*

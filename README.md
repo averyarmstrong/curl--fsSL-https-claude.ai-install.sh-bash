@@ -33,17 +33,40 @@ bench run is pre-registered in `docs/05_bench_protocol.md`.
    vehicle on ISO A / B / C / D. This reproduces the published 100–400 W
    (Zuo & Zhang 2013) and replaces every "the spring is a bigger
    reservoir" statement in prior AKS material (F1, `docs/07_claims_audit.md`).
-2. The Gate's share of that budget, φ = P_elec / P_road, is what the
-   experiments compute. With the stock damper left in place the Gate takes
-   under 10% (experiment 001); the remaining experiments map φ against
-   damper reduction, generator load, drive ratio, flywheel inertia,
-   spring ratio, travel, road class, speed and vehicle. Headline ranges are
-   in each `experiments/*/results/RESULTS.md` and summarised below once
-   the chain completes.
-3. Two architectural facts emerge before any optimisation: the geared
-   rotor's reflected inertance J·r² can lock the soft stage (F2), and a
-   soft stage with 2–5 in of travel binds at a few percent of corner-load
-   variation at the prototype spring ratio (F3).
+2. The Gate's share of that budget, φ = P_elec / P_road, is a property of
+   the corner, not of the road: 0.08 (mid-size car), 0.09 (F-150), 0.11
+   (HMMWV), 0.11–0.13 (heavy stations) with the OEM damper in place; about
+   0.3 when the damper is cut to a quarter, paid for with +20–50 % dynamic
+   tire load. Per corner at 60 mph, stock damper (experiments 002–003,
+   1,000 runs, ±3 % seed scatter):
+
+   | corner | ISO C: supply → P_elec → net of hardware mass | ISO D |
+   |---|---|---|
+   | mid-size car | 122 → 9.7 → −21 W | 488 → 39 → −3 W |
+   | F-150 | 169 → 15 → −23 W | 678 → 59 → +3 W |
+   | HMMWV | 271 → 29 → −18 W | 1084 → 117 → +48 W |
+   | MRAP (15 t) | 745 → 95 → +11 W | 2982 → 381 → +239 W |
+   | Class 8 loaded, dual station | 1220 → 153 → +57 W | 4879 → 614 → +425 W |
+
+   Passenger cars: tens of watts, roughly break-even. Heavy and tactical
+   vehicles on rough roads: hundreds of watts per station, kilowatts per
+   vehicle. Every claim in prior AKS material is re-tagged against this in
+   `docs/07_claims_audit.md` (12 of 29 unsupported, all for one reason: F1).
+3. Design rules that fell out of the sweeps: the reflected inertance J·r²
+   must stay below ~10 kg for a car corner or the soft stage locks (exp
+   004, 006); the optimum generator load is c_gen·r² ≈ 300–900 N·s/m and
+   is insensitive to the bias ratio (exp 001, 005); where the OEM damper
+   acts is the largest single lever and trades harvest against grip along
+   one curve (exp 006); stops are a class-D / reduced-damper issue, not a
+   paved-road one (exp 005, 002); peak race speed exceeds catalog sprag
+   lift-off above r ≈ 200 rad/m (sizing report); clutch service life has no
+   literature basis at ~170 engagements per km per set (F6).
+
+An exact linear surrogate of the Gate corner (`validate/analytic.py`)
+reproduces the nonlinear sweeps within ~10 % wherever the clutches are
+engaged most of the time and gives the ride/grip-constrained ceiling in
+milliseconds (`reports/linear_frontier.md`); a numba RHS runs the hybrid
+model 3.5× faster (`vehicles/quarter_car_fast.py`, equivalence-tested).
 
 **Validation gates (all passing, `make test`).** (a) linear quarter car
 vs analytic transmissibility < 1%; (b) Zuo baseline band; (c) single-stroke

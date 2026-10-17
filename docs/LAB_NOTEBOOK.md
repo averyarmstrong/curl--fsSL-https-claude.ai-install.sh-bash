@@ -163,3 +163,23 @@ validate against closed forms and the Zuo baseline, run experiments
   backlash and torque-capacity slip). Sweeps default to it.
 - **Exp 007 (Monte Carlo)** script written; 1152 cases; to run after the
   chain.
+
+### Session 2 close-out (03:55)
+
+- Chain finished 03:52: 1,794 cases, 0 errors, max closure 7.6e-6.
+- φ is a corner property (stock damper 0.08–0.13 across all classes,
+  speeds, vehicles); heavy stations are 10× a car because of tire
+  stiffness; P_net > 0 from ISO C at highway speed for heavy stations only.
+- Damper placement is the biggest lever (46.8 W vs 9.7 W, mid-size car) and
+  trades grip exactly like damper reduction. Harvest-vs-tire-load is one
+  curve.
+- Stops never reached on ISO C at stock damping (F3 regime corrected);
+  class D with reduced damping: 4–12 % of time on a stop.
+- Race speed exceeds catalog lift-off above r ≈ 200 rad/m at the peaks;
+  clutch must sit on the slow side of a step-up or be lift-off-free.
+- Launched exp 007 Monte Carlo (48 LHS samples × 4 vehicles × 3 classes).
+- Ugly: the c_gen grids in 002/003 top out for the heaviest stations
+  (stock-damper optimum at the grid edge) → those numbers are slightly
+  conservative; widen the grid next run. The linear surrogate's optimum
+  (c_eq 300–500 for a car) scales with corner impedance for trucks; use it
+  to set grids first.

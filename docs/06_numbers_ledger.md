@@ -39,3 +39,9 @@ experiment's `results/RESULTS.md` for the full tables.)*
 | 7.3 – 10.0 | W per corner | ±2 % | k_b/k_m 0.8 → 0.05, ISO C 60 mph, stock damper; t_stop = 0 at 2–5 in travel | modeled | exp 005 | 2026-10-17 |
 | 46.8 | W per corner | ±3 % | OEM damper on main stage only (integrated layout), ISO C 60 mph, midsize; DTL +40 % | modeled | exp 006 | 2026-10-17 |
 | 0.7 | — | — | rotor speed ripple std/mean, insensitive to J 1e-5 – 3e-3 (clutches engaged 90–95 % of time) | modeled | exp 006 | 2026-10-17 |
+| 153 / 614 | W per dual station | ±3 % | Class 8 loaded, ISO C / D, 60 mph, stock damper, best load | modeled | exp 003 | 2026-10-17 |
+| 370 / 1439 | W per dual station | ±3 % | same, OEM damper ×0.25 (DTL +19 %) | modeled | exp 003 | 2026-10-17 |
+| 95 / 381 ; 214 / 838 | W per corner | ±3 % | MRAP ISO C / D 60 mph, stock ; damper ×0.25 (DTL −1 %) | modeled | exp 003 | 2026-10-17 |
+| 132 / 528 ; 135 / 539 | W per dual station | ±3 % | box truck ; Class 8 empty, ISO C / D 60 mph, stock damper | modeled | exp 003 | 2026-10-17 |
+| 0.11–0.13 ; 0.28–0.33 | φ | — | heavy stations, stock ; ×0.25 damper, any class/speed | modeled | exp 003 | 2026-10-17 |
+| 1.4 / 5.5 ; 3.3 / 13 | kW per vehicle | ±3 % | loaded tractor-trailer (9 dual stations) ISO C / D 60 mph, stock ; ×0.25 damper | modeled | exp 003 | 2026-10-17 |
