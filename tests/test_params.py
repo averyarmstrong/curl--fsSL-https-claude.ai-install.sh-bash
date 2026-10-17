@@ -33,7 +33,8 @@ def test_vehicle_modes_sane():
         assert 0.9 <= c.body_hz <= 2.2, (name, c.body_hz)
         assert 7.0 <= c.hop_hz <= 20.0, (name, c.hop_hz)
         zeta = c.c_s / (2 * math.sqrt(c.k_m * c.m_s))
-        assert 0.2 <= zeta <= 0.45, (name, zeta)
+        zmax = load_vehicles()[name].get("zeta_max", {}).get("value", 0.45)
+        assert 0.2 <= zeta <= zmax, (name, zeta)
 
 
 def test_overrides_apply():

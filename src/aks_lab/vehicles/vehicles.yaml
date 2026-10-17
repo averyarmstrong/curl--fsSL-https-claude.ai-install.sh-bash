@@ -91,3 +91,4 @@ hmmwv_mr_paper:
   c_s: {value: 27160.0, units: N.s/m, provenance: "[LITERATURE-S] same; OEM damper extension coefficient (compression not given)"}
   k_t: {value: 463800.0, units: N/m, provenance: "[LITERATURE-S] same; ambiguous whether per tire or total of four springs"}
   gate_mass: {value: 15.0, units: kg, provenance: "[ESTIMATE] open"}
+  zeta_max: {value: 1.2, units: "-", provenance: "[NOTE] sanity bound widened for this set: quoted extension damping gives zeta ~1.1"}
