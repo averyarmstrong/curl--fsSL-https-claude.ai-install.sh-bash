@@ -129,4 +129,59 @@ produce. When the 14 W record is supplied, it goes in
 
 ---
 
-*(Entries F5+ are appended as the experiments complete.)*
+## F5. With ride and tire grip held at stock levels, a passenger-car corner nets single-digit to low-double-digit watts; positive net benefit starts at ISO D or on heavy wheel stations
+
+**What AKS says.** Diligence Response: 30–100 W average per corner on
+ISO C for a 1500–2000 kg car; 70–175 W on ISO D; deck: ~350 W per pickup,
+~5 kW per loaded Class 8 on average roads.
+
+**What the repo finds (linear surrogate, exact; `reports/linear_frontier.md`).**
+The Gate's frame stage is a spring k_b in parallel with the reflected
+generator damping c_eq = c_gen·r², in *series* with the main spring. Three
+consequences follow from the exact H₂ solution of that corner:
+
+1. The best generator load is c_eq ≈ 300–500 N·s/m for a passenger car
+   and is nearly independent of the bias ratio (0.05–1.0) — the ratio
+   sets stroke, not power.
+2. Taking more of the budget requires removing the OEM damper, and a
+   series stage cannot replace it: as c_s → 0 the body mode goes
+   undamped (sprung acceleration ×7). The unconstrained maximum φ ≈
+   0.33–0.50 is reached only with the damper at 10% and dynamic tire load
+   up 50–90% — not a vehicle anyone would ship.
+3. Holding sprung-acceleration RMS ≤ passive **and** tire-load RMS ≤ 1.1 ×
+   passive, the ceiling is φ ≈ 0.11 (mid-size car), 0.17 (F-150), 0.21
+   (HMMWV), 0.25 (loaded Class 8 station), 0.39 (MRAP). **Tire-load
+   variation, not ride, is the binding constraint**: the soft series
+   stage lets the wheel follow the road less closely.
+
+| vehicle, 60 mph | supply ISO C | P_elec ceiling ISO C | P_net (with gate mass) | P_net ISO D |
+|---|---|---|---|---|
+| mid-size car corner | 122 W | 13 W | −16 W | +14 W |
+| F-150 corner | 169 W | 28 W | −12 W | +48 W |
+| HMMWV corner | 271 W | 56 W | +10 W | +158 W |
+| Class 8 loaded dual station | 1220 W | 304 W | +233 W | +1129 W |
+| MRAP corner | 745 W | 289 W | +218 W | +1068 W |
+
+(mass penalty at the `gate_mass` estimate: 26 W for 10 kg at 60 mph on a
+car; the estimate is open.) The nonlinear sweeps (001–003) include stops,
+freewheeling and partial engagement and can only come in at or below these
+numbers; experiment 001 at the surrogate's load point gives 9.7 W vs the
+surrogate's 10.6 W.
+
+**How sure.** Exact for the linear model; the model's assumptions (small
+motion, no stops, white road velocity, point-contact tire) all err on the
+generous side. The tire-load constraint threshold (10%) is a choice;
+loosening it to 25% raises the car ceiling to roughly φ 0.2.
+
+**What to say instead.** For passenger cars: "tens of watts per corner on
+average roads at highway speed, net of hardware mass roughly zero; the
+device pays for itself only on rough roads." For heavy and tactical
+vehicles on rough duty: "hundreds of watts per wheel station, about a
+kilowatt per station on ISO D" — which is where the Military Brief already
+put it (60–300 W per corner, 0.25–1.2 kW per vehicle). The deck's 350 W
+pickup and 5 kW average-road semi are not reachable under any ride or grip
+constraint in this model.
+
+---
+
+*(Entries F6+ are appended as the experiments complete.)*

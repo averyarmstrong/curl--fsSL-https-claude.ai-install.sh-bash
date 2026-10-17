@@ -25,3 +25,8 @@ only superseded by a later row.
 
 *(Experiment rows appended below by `run.py` summaries — see each
 experiment's `results/RESULTS.md` for the full tables.)*
+| 13 / 28 / 56 / 304 / 289 | W per corner (station) | exact (linear surrogate) | ISO C, 60 mph, ride ≤ passive & DTL ≤ 1.1×passive: midsize / F-150 / HMMWV / Class 8 loaded dual / MRAP | modeled | reports/linear_frontier.md | 2026-10-17 |
+| −16 / −12 / +10 / +233 / +218 | W net per corner | exact (surrogate) | same, minus friction and gate_mass penalty (open estimate) | modeled | same | 2026-10-17 |
+| 0.11 / 0.17 / 0.21 / 0.25 / 0.39 | φ (constrained ceiling) | exact (surrogate) | same vehicles | modeled | same | 2026-10-17 |
+| 300–500 | N·s/m | — | optimal reflected generator damping c_gen·r², passenger car, any bias ratio 0.05–1 | modeled | same | 2026-10-17 |
+| 9.7 (9.5–9.9) | W per corner | 3 seeds | nonlinear sim, midsize, ISO C 60 mph, r 300, J 3e-5, c_gen 0.01, stock damper | modeled | exp 001 | 2026-10-17 |
