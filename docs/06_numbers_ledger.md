@@ -45,3 +45,7 @@ experiment's `results/RESULTS.md` for the full tables.)*
 | 132 / 528 ; 135 / 539 | W per dual station | ±3 % | box truck ; Class 8 empty, ISO C / D 60 mph, stock damper | modeled | exp 003 | 2026-10-17 |
 | 0.11–0.13 ; 0.28–0.33 | φ | — | heavy stations, stock ; ×0.25 damper, any class/speed | modeled | exp 003 | 2026-10-17 |
 | 1.4 / 5.5 ; 3.3 / 13 | kW per vehicle | ±3 % | loaded tractor-trailer (9 dual stations) ISO C / D 60 mph, stock ; ×0.25 damper | modeled | exp 003 | 2026-10-17 |
+| 5.6 / 9.2 / 12.3 | W per corner | 5–95 % over open parameters + road seed | midsize, ISO C 60 mph, damper ×0.75, r 300 | modeled | exp 007 | 2026-10-17 |
+| 9.4 / 14.0 / 20.0 ; 17 / 25 / 34 | W per corner | 5–95 % | F-150 ; HMMWV, ISO C 60 mph, same design point | modeled | exp 007 | 2026-10-17 |
+| −45 / −31 / −13 | W net per corner | 5–95 % | midsize ISO C incl. 6–18 kg hardware | modeled | exp 007 | 2026-10-17 |
+| −0.64 / −0.45 / +0.35 | Spearman ρ with P_elec | — | guide friction / overrun drag / generator efficiency (midsize) | modeled | exp 007 | 2026-10-17 |

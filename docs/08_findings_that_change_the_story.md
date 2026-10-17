@@ -183,6 +183,12 @@ with tire-load RMS +40 % and W_k −39 %, the same trade the retrofit pays
 for cutting its damper. The harvest-vs-grip curve is one curve; layout and
 damper scale move along it.
 
+**Uncertainty bands (experiment 007, 1,152 runs, 48 Latin-hypercube
+draws of every open parameter per cell).** Mid-size car ISO C at 60 mph:
+P_elec 5.6–12.3 W (5–95 %), P_net −45 to −13 W; F-150 9.4–20 W; HMMWV
+17–34 W. The spread is set by the Gate's own friction and overrun drag,
+then generator efficiency — all bench-measurable — not by the road.
+
 **Nonlinear confirmation (experiment 002, 504 runs).** φ with the stock
 damper: 0.08 (car), 0.09 (F-150), 0.11 (HMMWV) on every class and speed;
 P_net at 60 mph on ISO C: −21 / −23 / −18 W; positive only on ISO D (−3 /

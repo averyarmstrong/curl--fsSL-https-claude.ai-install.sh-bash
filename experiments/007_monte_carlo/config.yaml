@@ -27,3 +27,9 @@ ranges:                      # [low, high], log-uniform unless noted
   eta:          [0.75, 0.92]       # uniform
   m_f:          [4.0, 12.0]        # uniform
   delta_m_scale: [0.6, 1.8]        # multiplies the vehicle gate_mass estimate; uniform
+# Correction after the first pass (04:50): the passenger-car load range was
+# applied to the Class 8 station, whose optimum reflected damping is ~10x
+# higher (exp 003). Per-vehicle override of the c_eq_target range; the
+# Class 8 rows are re-run (resume keeps the others). Ugly run kept in README.
+c_eq_target_by_vehicle:
+  class8_loaded: [3000.0, 12000.0]

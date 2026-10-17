@@ -29,14 +29,17 @@ OUT = HERE / "results"
 UNIFORM = {"theta_bl", "travel", "eq_fraction", "eta", "m_f", "delta_m_scale"}
 
 
-def samples():
+def samples(vehicle=None):
     names = list(CFG["ranges"])
+    ranges = dict(CFG["ranges"])
+    if vehicle in CFG.get("c_eq_target_by_vehicle", {}):
+        ranges["c_eq_target"] = CFG["c_eq_target_by_vehicle"][vehicle]
     u = qmc.LatinHypercube(d=len(names), seed=7).random(CFG["n_samples"])
     rows = []
     for k, row in enumerate(u):
         s = {}
         for j, n in enumerate(names):
-            lo, hi = CFG["ranges"][n]
+            lo, hi = ranges[n]
             s[n] = float(lo + (hi - lo) * row[j]) if n in UNIFORM else float(np.exp(np.log(lo) + (np.log(hi) - np.log(lo)) * row[j]))
         s["sample"] = k
         rows.append(s)
@@ -50,7 +53,7 @@ def cases():
         _, gm = corner(v)
         for klass in CFG["classes"]:
             base = dict(vehicle=v, klass=klass, speed=CFG["speed_mps"], duration=CFG["duration_s"], damper_span="full")
-            for s in samples():
+            for s in samples(v):
                 seed = 100 + s["sample"]
                 cs.append(passive_case({**base, "m_f": 8.0}, seed, delta_m=gm * s["delta_m_scale"]))
                 over = {"r": d["r"], "c_gen": s["c_eq_target"] / d["r"] ** 2, "J": s["J"], "c_b": s["c_b"], "c_od": s["c_od"],
