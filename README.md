@@ -117,7 +117,7 @@ make report             # regenerate every figure/table from parquet, no simulat
 
 ## Reading order for a reviewer
 
-`docs/00_intake.md` → `docs/01_physics.md` → `docs/03_symmetry_breaking_first_principles.md` → `tests/` → `docs/08_findings…`
+`docs/00_intake.md` → `docs/01_physics.md` → `docs/03_symmetry_breaking_first_principles.md` → `docs/03a_pump_top_first_principles.md` → `tests/` → `docs/08_findings…`
 → `experiments/001…/README.md` → `docs/07_claims_audit.md`.
 
 ## Rules

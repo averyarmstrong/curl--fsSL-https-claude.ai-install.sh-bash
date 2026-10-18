@@ -46,6 +46,7 @@ corner on ISO C. Vehicle weight enters only through tire stiffness.
       corrected and re-run), README, bands in F5 and ledger
 - [x] Session 3: body-force channel (E_body), one-sided tire, gravity test, exp 008, F8
 - [x] Session 4: drawings viewed; `docs/03_symmetry_breaking_first_principles.md` + test (loop area = energy; spring is storage)
+- [x] Session 4b: pump-top toy researched and modeled (`aks_lab.toy.PumpTop`, exp 009, `docs/03a`): race ceiling ω ≤ r·v_hand, reflected mass J r², full-wave = capture not source
 - [ ] Clutch endurance leg T6 and bench data when hardware runs
 - [ ] Half-car (pitch) model; measured-profile ingest from FHWA LTPP
 - [x] numba RHS (3.5×); sweeps default to it
@@ -65,6 +66,7 @@ corner on ISO C. Vehicle weight enters only through tire stiffness.
   Lyapunov; Zuo baseline.
 - `sweeps/` — case dict → row; multiprocessing; resumable parquet.
 - `bench/` — prescribed-stroke rig (hand-derivation anchor), CSV reduction.
+- `toy/pump_top.py` — the push-down top with a Hill hand, helix, pawl(s), flywheel, stops; own event loop; ledger as states.
 
 ## Gotchas
 

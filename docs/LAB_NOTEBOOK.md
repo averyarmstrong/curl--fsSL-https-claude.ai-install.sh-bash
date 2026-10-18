@@ -234,3 +234,30 @@ cycle = 11.5 / 57.3 W, peak rod force 48 / 239 N. Flywheel at J r² = 10 kg:
 **Ugly thing.** The 1 kW figure Avery used needs a 4,200 N peak rod force
 at 1 in / 3 Hz, i.e. the whole static corner load of a mid-size car swinging
 in phase with the bias-stage velocity. That is in the doc (§7) and in F5/F7.
+
+### Session 4b (2026-10-18): the toy, researched and modeled
+
+Avery: "do your research on how the push down topper toys work". Primary
+pages (Google Patents, USPTO, Wikipedia, Cambridge) are blocked by the
+proxy; worked from search excerpts of US 2,841,920, US 3,785,081,
+US 4,304,064, US 4,455,781, US 6,406,349, the otvinta printed top, Yankee
+screwdriver mechanics, the pump drill and Hunt's sleeping-top page. Record
+in `docs/03a` §1 with grades; upgrade to page cites when the PDFs open.
+
+Built `aks_lab.toy.PumpTop` with a hand FORCE (Hill law), not a prescribed
+stroke, so the toy can tell us its own ceiling. Three bugs on the way:
+scipy returned a list for `sol.t` when `t_eval` had no points before an
+event (switched to dense output on a grid); the screw-loss term carried
+the pawl sign and went negative on the up-stroke pawl (loss is
+`(1-η)·F_c·v`, positive on either driving stroke); the first lock-up had
+no momentum exchange (added `(m_p + J r²) v⁺ = m_p v⁻ + J r ω⁻`).
+
+Ugly result worth keeping: with one pawl and a hand that keeps pushing
+after the body outruns the nut, 52 % of the hand's work goes into the
+bottom stop. Real pump tops clack for exactly this reason. Two pawls cut
+that to 2 % — by loading the return stroke, not by finding energy.
+
+Numbers (all `modeled`, toy parameters `asserted`): 20 pushes → 191 rad/s
+(1,820 rpm); ω_end tracks r·v_peak to within 1 % every push; reflected mass
+7.9 kg at 25 mm/rev; loaded top yields 0.3–0.6 W from 0.8–1.2 W of hand
+power. Exp 009, 6 new tests (60 total).

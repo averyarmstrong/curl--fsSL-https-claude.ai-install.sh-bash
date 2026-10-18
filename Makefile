@@ -28,6 +28,9 @@ exp005:
 exp006:
 	$(PY) experiments/006_flywheel_tornado/run.py --workers $(NPROC)
 
+exp009:
+	$(PY) experiments/009_pump_top_toy/run.py
+
 experiments: exp001 exp002 exp003 exp004 exp005 exp006
 
 # Regenerate every figure and table from the parquet results (no simulation).

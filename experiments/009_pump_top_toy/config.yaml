@@ -1,0 +1,8 @@
+# Experiment 009: the push-down spinning top from first principles (docs/03a).
+# Every parameter is an `asserted` toy-scale estimate (no toy was measured); the
+# conclusions below are structural (ceilings, ledgers, ratios), not point values.
+duration_s: 12.0            # 20 pumps at 0.6 s
+leads_m_per_rev: [0.0125, 0.025, 0.05, 0.1]
+loads_Nms: [0.0, 2.0e-5, 5.0e-5, 1.0e-4, 2.0e-4, 5.0e-4]
+hands: [[15, 1.0], [30, 1.0], [15, 2.0], [30, 2.0]]   # [N at rest, m/s where force -> 0]
+spin_down_s: 10.0
