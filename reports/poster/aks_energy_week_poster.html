@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Armstrong Kinetic Solutions — Duke Energy Week Poster</title>
+<style>
+  @page { size: 48in 36in; margin: 0; }
+  :root{
+    --navy:#0e2240; --ink:#1b2a3d; --muted:#51627a;
+    --blue:#0d5bb5; --blue2:#19a0ff; --green:#5fb82a; --green2:#2f7d32;
+    --steel:#c9d1dc; --paper:#ffffff; --panel:#f4f7fb; --line:#d9e1ec;
+    --amber:#c77800;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#fff}
+  body{width:48in;height:36in;overflow:hidden;font-family:"Inter","Inter Display",system-ui,sans-serif;color:var(--ink);
+       -webkit-print-color-adjust:exact;print-color-adjust:exact;position:relative}
+  .poster{width:48in;height:36in;padding:0.9in 1.0in 0.7in;display:flex;flex-direction:column;gap:0.45in;position:relative}
+  /* decorative brand swoosh */
+  .swoosh{position:absolute;left:0;top:0;width:48in;height:36in;pointer-events:none;z-index:0}
+  .content{position:relative;z-index:1;display:flex;flex-direction:column;gap:0.45in;height:100%}
+
+  header{display:grid;grid-template-columns:4.6in 1fr 10.6in;align-items:center;gap:0.6in;
+         border-bottom:0.08in solid transparent;
+         border-image:linear-gradient(90deg,var(--blue) 0%,var(--blue2) 45%,var(--green) 100%) 1;padding-bottom:0.4in}
+  header .mark img{width:4.6in;display:block}
+  header .title{display:flex;flex-direction:column;gap:0.12in}
+  .wordmark{font-family:"Inter Display","Inter",sans-serif;font-weight:800;font-size:0.9in;letter-spacing:0.02em;line-height:1;color:var(--navy)}
+  .wordmark small{display:block;font-weight:500;font-size:0.42in;letter-spacing:0.28em;color:var(--blue);margin-top:0.08in}
+  .slogan{font-family:"Inter Display","Inter",sans-serif;font-weight:700;font-size:1.02in;line-height:1.04;letter-spacing:0.01em;
+          background:linear-gradient(90deg,var(--blue) 0%,var(--blue2) 50%,var(--green) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:0.1in}
+  .sub{font-size:0.42in;font-weight:500;color:var(--muted);line-height:1.25;margin-top:0.08in}
+  .sub b{color:var(--navy);font-weight:700}
+  .presenter{justify-self:end;text-align:right;font-size:0.4in;line-height:1.35;color:var(--muted)}
+  .presenter .n{font-size:0.56in;font-weight:700;color:var(--navy)}
+  .presenter .e{font-size:0.5in;font-weight:600;color:var(--blue)}
+
+  main{display:grid;grid-template-columns:14.4in 15.9in 14.4in;gap:0.65in;flex:1;min-height:0}
+  .col{display:flex;flex-direction:column;gap:0.35in;min-height:0}
+  section{background:var(--panel);border:0.03in solid var(--line);border-radius:0.28in;padding:0.36in 0.45in 0.38in;position:relative}
+  section.hero{background:linear-gradient(160deg,#0e2240 0%,#0d5bb5 70%,#1476c9 100%);color:#fff;border:none}
+  h2{font-family:"Inter Display","Inter",sans-serif;font-size:0.58in;font-weight:800;line-height:1.05;margin:0 0 0.28in;color:var(--navy);letter-spacing:-0.005em;display:flex;align-items:center;gap:0.25in}
+  h2 .num{display:inline-flex;align-items:center;justify-content:center;width:0.78in;height:0.78in;border-radius:50%;
+          background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;font-size:0.44in;font-weight:800;flex:none}
+  section.hero h2{color:#fff}
+  p,li{font-size:0.33in;line-height:1.36;margin:0}
+  p+p{margin-top:0.22in}
+  .lead{font-size:0.4in;font-weight:600;line-height:1.3;color:var(--navy)}
+  section.hero .lead{color:#fff}
+  ul{padding-left:0.5in;margin:0.1in 0 0}
+  li{margin-bottom:0.16in}
+  li::marker{color:var(--blue);font-weight:800}
+  .steps{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.22in}
+  .steps li{display:grid;grid-template-columns:0.72in 1fr;gap:0.22in;align-items:start}
+  .steps .k{width:0.72in;height:0.72in;border-radius:0.16in;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.4in}
+  .steps b{color:var(--navy)}
+  .quote{font-family:"Inter Display","Inter",sans-serif;font-size:0.54in;font-weight:700;line-height:1.22;color:#fff}
+  .quote em{font-style:normal;color:#b9ff7a}
+  .tag{display:inline-block;font-size:0.27in;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.06in 0.16in;border-radius:0.12in;margin-right:0.1in;vertical-align:middle}
+  .t-m{background:#dff3d2;color:#245c12}.t-p{background:#dbeafe;color:#0b3f86}.t-a{background:#fdebc8;color:#7a4a00}.t-l{background:#e8e3f7;color:#3f2b84}
+  table{width:100%;border-collapse:collapse;font-size:0.29in;margin-top:0.12in}
+  th,td{text-align:left;padding:0.09in 0.12in;border-bottom:0.02in solid var(--line);vertical-align:top;line-height:1.3}
+  th{font-size:0.3in;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:700}
+  td.v{font-weight:700;color:var(--navy);white-space:nowrap}
+  .legend{font-size:0.26in;color:var(--muted);margin-top:0.14in;line-height:1.7}
+  .grid2{display:grid;grid-template-columns:1.12fr 1fr;gap:0.35in}
+  .graveyard{display:flex;flex-direction:column;gap:0.14in;margin-top:0.15in}
+  .graveyard div{display:grid;grid-template-columns:3.0in 1fr;gap:0.2in;font-size:0.3in;line-height:1.3;padding:0.12in 0.18in;background:#fff;border-radius:0.14in;border:0.02in solid var(--line)}
+  .graveyard b{color:var(--navy)}
+  .diagram{background:#fff;border-radius:0.22in;border:0.02in solid var(--line);padding:0.2in}
+  .cap{font-size:0.31in;color:var(--muted);line-height:1.35;margin-top:0.12in}
+  .roadmap{display:flex;flex-direction:column;gap:0.18in;margin-top:0.05in}
+  .roadmap > div{display:grid;grid-template-columns:1.15in 1fr;gap:0.22in;align-items:start;background:#fff;border:0.02in solid var(--line);border-radius:0.16in;padding:0.2in 0.22in}
+  .roadmap .st{font-size:0.26in;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;padding:0.08in 0;border-radius:0.1in;text-align:center;color:#fff}
+  .done{background:var(--green2)}.now{background:var(--blue)}.next{background:var(--navy)}.goal{background:linear-gradient(135deg,var(--blue),var(--green))}
+  .roadmap b{color:var(--navy);display:block;font-size:0.35in;margin-bottom:0.04in}
+  .roadmap span{font-size:0.33in;line-height:1.32;color:var(--ink)}
+  .story{display:grid;grid-template-columns:4.4in 1fr;gap:0.4in;align-items:start}
+  .story img{width:4.4in;border-radius:0.2in;display:block;box-shadow:0 0.08in 0.3in rgba(14,34,64,.25)}
+  .story p{font-size:0.31in}
+  main .col:nth-child(-n+2) > section:last-child{flex:1}
+  footer{display:flex;justify-content:space-between;align-items:center;gap:0.5in;border-top:0.05in solid var(--line);padding-top:0.3in;font-size:0.36in;color:var(--muted)}
+  footer b{color:var(--navy)}
+  footer .url{font-size:0.5in;font-weight:700;color:var(--blue)}
+  .pill{display:inline-block;background:#fff;border:0.02in solid var(--line);border-radius:1in;padding:0.08in 0.28in;font-size:0.32in;font-weight:600;color:var(--navy);margin:0.06in 0.06in 0 0}
+</style>
+</head>
+<body>
+<div class="poster">
+<svg class="swoosh" viewBox="0 0 4800 3600" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#5fb82a" stop-opacity="0.10"/><stop offset="0.5" stop-color="#19a0ff" stop-opacity="0.08"/><stop offset="1" stop-color="#0d5bb5" stop-opacity="0.04"/></linearGradient>
+  </defs>
+  <path d="M-200,3300 C900,2600 2600,2500 5000,2900 L5000,3600 L-200,3600 Z" fill="url(#sw)"/>
+  <path d="M-200,3420 C1100,2800 2800,2700 5000,3050" fill="none" stroke="#5fb82a" stroke-opacity="0.18" stroke-width="18"/>
+  <path d="M-200,3500 C1100,2900 2800,2800 5000,3150" fill="none" stroke="#19a0ff" stroke-opacity="0.16" stroke-width="10"/>
+</svg>
+
+<div class="content">
+<header>
+  <div class="mark"><img src="assets/logo_mark.png" alt="Armstrong Kinetic Solutions logo"></div>
+  <div class="title">
+    <div class="wordmark">ARMSTRONG <small>KINETIC SOLUTIONS</small></div>
+    <div class="slogan">Supplying the world with an abundance of clean energy.</div>
+    <div class="sub">Every spring stores energy and gives it straight back. <b>The Armstrong Gate</b> is a mechanical full-wave rectifier that keeps it, starting with the suspension spring of every vehicle on the road. <b>U.S. Patent 12,409,695 B2</b>, granted September 9, 2025.</div>
+  </div>
+  <div class="presenter">
+    <div class="n">Avery Armstrong</div>
+    <div>Co-Founder &amp; CEO · Duke University</div>
+    <div class="e">Duke Energy Week 2026</div>
+    <div>avery@armstrongkineticsolutions.com · 918-490-3655</div>
+  </div>
+</header>
+
+<main>
+  <!-- ================= COLUMN 1 ================= -->
+  <div class="col">
+    <section class="hero">
+      <h2>Our vision</h2>
+      <div class="quote">Energy is not something you generate. It is already there. <em>You just need to stop giving it back.</em></div>
+      <p style="margin-top:0.25in;font-size:0.34in;color:#dbe9ff;line-height:1.4">Clean energy is usually framed as a supply problem: build more. We see an abundance problem. Useful motion is thrown away as heat every second, in places engineering has learned not to look. Our mission is to find those places and build simple, rugged machines that keep the energy, in service of a world that needs every clean watt it can get.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">1</span>The problem: energy lost where springs oscillate</h2>
+      <p class="lead">A spring is a perfect reservoir with a leak at both ends. It takes energy in, then hands it right back, and the damper next to it burns the remainder as heat.</p>
+      <p>Vehicle suspensions are the largest example. Every bump, ripple, and engine or tire vibration pumps energy into the coil springs of more than a billion vehicles, and none of it is kept. The same story repeats in rail bogies, truck cabs and seats, robot joints, ship mounts, industrial machinery, and seismic isolators.</p>
+      <p style="margin-top:0.2in"><b style="color:var(--navy)">The measurement gap.</b> Decades of “regenerative suspension” research measured the <b>damper</b> and reported small numbers. The <b>spring</b> stroke, which carries the bulk of the stored energy, was never the target. That blind spot is the opportunity.</p>
+      <div style="margin-top:0.25in">
+        <span class="pill">Road vehicles</span><span class="pill">Heavy trucks &amp; fleets</span><span class="pill">Military vehicles</span><span class="pill">Robotics joints</span><span class="pill">Rail</span><span class="pill">Marine</span><span class="pill">Industrial vibration</span><span class="pill">Seismic</span>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span>Why hasn't it been done?</h2>
+      <p>Well-funded teams have tried to pull power from suspensions. Every one of them either targeted the damper or used powered actuators that consume energy.</p>
+      <div class="graveyard">
+        <div><b>Bose (2004–2017)</b><span>Electromagnetic active suspension; drew 1–4 kW per corner. Never shipped; technology sold to ClearMotion.</span></div>
+        <div><b>Audi eROT (2016)</b><span>Rotary damper harvester. Measured 100–150 W average, 3 W on smooth road. Never shipped.</span></div>
+        <div><b>ZF / Levant GenShock</b><span>Hydraulic damper harvester. Pivoted away from harvesting toward ride comfort.</span></div>
+        <div><b>ClearMotion (shipping)</b><span>$365M raised, in the Nio ET9 today. Proves the market exists, but it <i>consumes</i> power to smooth the ride.</span></div>
+      </div>
+      <p style="margin-top:0.24in"><b style="color:var(--navy)">Our difference:</b> we tap the spring stroke, not the damper, with a purely mechanical one-way drive. No actuators, no control power. And because the Gate pulls energy out of the suspension's motion, harvesting and ride quality move in the same direction rather than trading off.</p>
+    </section>
+  </div>
+
+  <!-- ================= COLUMN 2 ================= -->
+  <div class="col">
+    <section>
+      <h2><span class="num">3</span>Our first solution: the Armstrong Gate</h2>
+      <p class="lead">A gate lets traffic through in one direction. The Armstrong Gate lets spring motion through in one direction, as rotation, into a generator.</p>
+
+      <div class="grid2" style="margin-top:0.3in">
+        <div class="diagram">
+          <!-- Patented drive schematic (recreated from the AKS website figure) -->
+          <svg viewBox="0 0 700 1040" width="100%" style="display:block">
+            <defs>
+              <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0d5bb5"/></marker>
+              <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f7d32"/></marker>
+            </defs>
+            <style>
+              .pl{fill:#eef2f7;stroke:#0e2240;stroke-width:5}
+              .lab{font:600 30px Inter,sans-serif;fill:#0e2240}
+              .sm{font:500 24px Inter,sans-serif;fill:#51627a}
+              .ln{stroke:#51627a;stroke-width:2.5}
+            </style>
+            <!-- chassis input arrow -->
+            <text x="250" y="42" class="sm" text-anchor="middle">chassis / sprung mass</text>
+            <line x1="250" y1="58" x2="250" y2="105" stroke="#0d5bb5" stroke-width="8" marker-end="url(#ah)"/>
+            <!-- top plate -->
+            <rect x="80" y="112" width="340" height="22" class="pl"/>
+            <!-- guide rods -->
+            <rect x="92" y="134" width="14" height="520" fill="#c9d1dc" stroke="#0e2240" stroke-width="3"/>
+            <rect x="394" y="134" width="14" height="520" fill="#c9d1dc" stroke="#0e2240" stroke-width="3"/>
+            <!-- biasing spring (coil) between top and middle plate -->
+            <path d="M250,134 l80,18 l-160,18 l160,18 l-160,18 l160,18 l-160,18 l160,18 l-160,18 l160,18 l-160,18 l80,18" fill="none" stroke="#5fb82a" stroke-width="7" stroke-linejoin="round"/>
+            <!-- drive shaft (screw) -->
+            <rect x="238" y="134" width="24" height="700" fill="#dbe9ff" stroke="#0d5bb5" stroke-width="4"/>
+            <g stroke="#0d5bb5" stroke-width="3">
+              <line x1="238" y1="160" x2="262" y2="172"/><line x1="238" y1="190" x2="262" y2="202"/><line x1="238" y1="220" x2="262" y2="232"/><line x1="238" y1="250" x2="262" y2="262"/><line x1="238" y1="280" x2="262" y2="292"/><line x1="238" y1="310" x2="262" y2="322"/>
+              <line x1="238" y1="400" x2="262" y2="412"/><line x1="238" y1="430" x2="262" y2="442"/><line x1="238" y1="640" x2="262" y2="652"/><line x1="238" y1="670" x2="262" y2="682"/><line x1="238" y1="700" x2="262" y2="712"/>
+            </g>
+            <!-- middle plate -->
+            <rect x="80" y="340" width="340" height="22" class="pl"/>
+            <!-- first clutch -->
+            <rect x="196" y="388" width="108" height="44" rx="10" fill="#fff" stroke="#0e2240" stroke-width="5"/>
+            <circle cx="250" cy="410" r="12" fill="#0d5bb5"/>
+            <!-- generator -->
+            <path d="M200,470 h100 l30,30 v120 l-30,30 h-100 l-30,-30 v-120 z" fill="#fff" stroke="#0e2240" stroke-width="5"/>
+            <text x="250" y="548" class="sm" text-anchor="middle" style="font-weight:700;fill:#0e2240">GEN</text>
+            <!-- second clutch -->
+            <rect x="196" y="690" width="108" height="44" rx="10" fill="#fff" stroke="#0e2240" stroke-width="5"/>
+            <circle cx="250" cy="712" r="12" fill="#2f7d32"/>
+            <!-- bottom plate -->
+            <rect x="80" y="650" width="340" height="22" class="pl"/>
+            <!-- fly weights -->
+            <line x1="130" y1="800" x2="370" y2="800" stroke="#0e2240" stroke-width="6"/>
+            <ellipse cx="130" cy="800" rx="14" ry="30" fill="#c9d1dc" stroke="#0e2240" stroke-width="4"/>
+            <ellipse cx="370" cy="800" rx="14" ry="30" fill="#c9d1dc" stroke="#0e2240" stroke-width="4"/>
+            <!-- rotation arrow -->
+            <path d="M190,880 a60,22 0 1,0 120,0" fill="none" stroke="#2f7d32" stroke-width="7" marker-end="url(#ag)"/>
+            <text x="250" y="945" class="sm" text-anchor="middle">one direction, always</text>
+            <!-- labels -->
+            <g class="ln"><line x1="332" y1="190" x2="470" y2="190"/><line x1="304" y1="410" x2="470" y2="410"/><line x1="330" y1="560" x2="470" y2="560"/><line x1="304" y1="712" x2="470" y2="712"/><line x1="384" y1="800" x2="470" y2="800"/><line x1="262" y1="250" x2="262" y2="250"/></g>
+            <text x="480" y="200" class="lab">Biasing spring</text>
+            <text x="480" y="232" class="sm">soft, in series</text>
+            <text x="480" y="420" class="lab">First clutch</text>
+            <text x="480" y="570" class="lab">Generator</text>
+            <text x="480" y="722" class="lab">Second clutch</text>
+            <text x="480" y="810" class="lab">Fly weights</text>
+            <text x="480" y="842" class="sm">(flywheel)</text>
+            <line x1="262" y1="300" x2="470" y2="300" class="ln"/>
+            <text x="480" y="310" class="lab">Drive shaft</text>
+            <!-- footer -->
+            <text x="250" y="1000" class="sm" text-anchor="middle">Down: first clutch grips</text><text x="250" y="1030" class="sm" text-anchor="middle">Up: second clutch grips</text>
+          </svg>
+          <div class="cap">The patented drive. Both halves of the stroke turn the generator shaft the same way.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:0.3in">
+          <div class="diagram">
+            <!-- push-down top analogy -->
+            <svg viewBox="0 0 700 580" width="100%" style="display:block">
+              <style>.lab2{font:600 30px Inter,sans-serif;fill:#0e2240}.sm2{font:500 24px Inter,sans-serif;fill:#51627a}</style>
+              <text x="350" y="40" class="lab2" text-anchor="middle">An analogy: a push-down top</text>
+              <line x1="350" y1="60" x2="350" y2="100" stroke="#0d5bb5" stroke-width="8" marker-end="url(#ah)"/>
+              <rect x="300" y="108" width="100" height="18" rx="9" fill="#eef2f7" stroke="#0e2240" stroke-width="4"/>
+              <rect x="340" y="126" width="20" height="150" fill="#dbe9ff" stroke="#0d5bb5" stroke-width="4"/>
+              <g stroke="#0d5bb5" stroke-width="3"><line x1="340" y1="140" x2="360" y2="150"/><line x1="340" y1="165" x2="360" y2="175"/><line x1="340" y1="190" x2="360" y2="200"/><line x1="340" y1="215" x2="360" y2="225"/><line x1="340" y1="240" x2="360" y2="250"/></g>
+              <path d="M350,276 C520,276 600,330 600,370 C600,420 420,470 350,500 C280,470 100,420 100,370 C100,330 180,276 350,276 z" fill="#fff" stroke="#0e2240" stroke-width="5"/>
+              <ellipse cx="350" cy="372" rx="250" ry="34" fill="none" stroke="#19a0ff" stroke-width="4" stroke-dasharray="14 10"/>
+              <path d="M150,372 a200,30 0 1,0 400,0" fill="none" stroke="#2f7d32" stroke-width="6" marker-end="url(#ag)"/>
+              <text x="350" y="535" class="sm2" text-anchor="middle">Press: the spiral spindle turns the top.</text><text x="350" y="563" class="sm2" text-anchor="middle">Let go: it keeps spinning.</text>
+            </svg>
+          </div>
+          <div class="diagram">
+            <!-- electrical analogy -->
+            <svg viewBox="0 0 700 300" width="100%" style="display:block">
+              <style>.lab3{font:600 28px Inter,sans-serif;fill:#0e2240}.sm3{font:500 23px Inter,sans-serif;fill:#51627a}</style>
+              <text x="350" y="36" class="lab3" text-anchor="middle">The electrical twin: a full-wave rectifier</text>
+              <path d="M20,150 q25,-70 50,0 t50,0 t50,0 t50,0" fill="none" stroke="#0d5bb5" stroke-width="6"/>
+              <path d="M20,150 q25,70 50,0 t50,0 t50,0 t50,0" fill="none" stroke="#0d5bb5" stroke-width="6" stroke-dasharray="10 8"/>
+              <text x="120" y="215" class="sm3" text-anchor="middle">stroke: up / down</text>
+              <text x="285" y="158" class="lab3" text-anchor="middle">→</text>
+              <path d="M330,150 q25,-70 50,0 t50,0 t50,0 t50,0 t50,0" fill="none" stroke="#2f7d32" stroke-width="6"/>
+              <line x1="330" y1="98" x2="580" y2="98" stroke="#5fb82a" stroke-width="5" stroke-dasharray="4 8"/>
+              <text x="455" y="215" class="sm3" text-anchor="middle">one-way, flywheel-smoothed</text>
+              <text x="350" y="275" class="sm3" text-anchor="middle">Clutches = diodes · Flywheel = capacitor · Generator = load</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size:0.52in;margin:0.45in 0 0.22in">How it works</h2>
+      <ol class="steps">
+        <li><span class="k">1</span><p><b>A soft spring goes first.</b> A frame biasing spring, softer than the main suspension spring, sits in series with it. Because it is the softest element, it takes the first inches of every stroke and routes that motion into the drive before the main spring deflects.</p></li>
+        <li><span class="k">2</span><p><b>Stroke becomes rotation.</b> The drive shaft plunges through two opposed one-way (sprag) clutches with opposite-hand screw engagement. Compression grips the first clutch; rebound grips the second.</p></li>
+        <li><span class="k">3</span><p><b>Both directions spin one way.</b> Each clutch drives the hollow generator shaft in the same direction. Up and down motion becomes continuous rotation: mechanical full-wave rectification.</p></li>
+        <li><span class="k">4</span><p><b>Fly weights smooth it, the generator keeps it.</b> The flywheel carries rotation through every stroke reversal and the generator turns smooth rotation into electricity for the vehicle's battery. No actuators, no control power.</p></li>
+      </ol>
+    </section>
+  </div>
+
+  <!-- ================= COLUMN 3 ================= -->
+  <div class="col">
+    <section>
+      <h2><span class="num">4</span>What we are aiming for</h2>
+      <p class="lead">Prove it on a bench, then demonstrate it on a real vehicle with coil springs.</p>
+      <div class="roadmap">
+        <div><span class="st done">Done</span><div><b>Patent granted</b><span>U.S. 12,409,695 B2, 18 claims, September 2025. First prototype frame machined (pictured below).</span></div></div>
+        <div><span class="st now">Now</span><div><b>Validated digital twin</b><span>Event-driven quarter-car plus Gate model with an exact energy ledger. Checked against published motion-rectifier and Audi eROT data before any prediction is reported.</span></div></div>
+        <div><span class="st next">Next</span><div><b>Bench test at Duke</b><span>Shaker-rig stroke sweeps at 3–5 pre-registered amplitude and frequency points, with pass/fail bands written down before the test runs.</span></div></div>
+        <div><span class="st goal">Goal</span><div><b>On-vehicle demonstration</b><span>Install the Gate on a coil-spring vehicle (a full-size pickup is the target) and measure harvested power across real roads, so the concept is demonstrated, not argued.</span></div></div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2><span class="num">5</span>The story</h2>
+      <div class="story">
+        <img src="assets/avery_larry.jpg" alt="Avery and Larry Armstrong holding the first machined Gate frame">
+        <div>
+          <p><b style="color:var(--navy)">Larry Armstrong</b>, inventor, of Eufaula, Oklahoma, spent a career building machines and asked a question the industry had stopped asking: why does every spring give its energy back? The answer became the Armstrong Gate.</p>
+          <p><b style="color:var(--navy)">Avery Armstrong</b>, Duke University, co-founded Armstrong Kinetic Solutions to carry the patent from drawings to hardware, with Duke's labs as the proving ground.</p>
+          <p>Pictured: Avery and Larry with the first machined Gate frame, summer 2025.</p>
+          <p style="font-weight:600;color:var(--navy)">We are a family company building for the whole world. Come find us at the poster; we would love your questions, your skepticism, and your help.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2><span class="num">6</span>Honest numbers</h2>
+      <table>
+        <tr><th>Quantity</th><th>Value</th><th>Basis</th></tr>
+        <tr><td>Motion-rectifier mechanical efficiency (prior art)</td><td class="v">&gt; 60 %</td><td><span class="tag t-l">Literature</span>Li &amp; Zuo, 2013</td></tr>
+        <tr><td>Damper-only harvest, Audi eROT</td><td class="v">100–150 W avg</td><td><span class="tag t-l">Literature</span>Audi, 2016</td></tr>
+        <tr><td>Passenger car, spring-stroke harvest</td><td class="v">hundreds of W</td><td><span class="tag t-p">Predicted</span>Gate twin, pre-prototype</td></tr>
+        <tr><td>Heavy trucks, military, rough duty</td><td class="v">kW class</td><td><span class="tag t-p">Predicted</span>road input is the limit</td></tr>
+        <tr><td>Regenerative suspension market</td><td class="v">$0.64B → $10B</td><td><span class="tag t-a">Estimate</span>2025 → 2035</td></tr>
+      </table>
+      <div class="legend"><span class="tag t-l">Literature</span>published measurement &nbsp; <span class="tag t-p">Predicted</span>our model, not yet measured &nbsp; <span class="tag t-a">Estimate</span>third-party market figure</div>
+      <p style="margin-top:0.14in;font-size:0.3in;color:var(--muted)">A sedan will not charge itself. The large numbers live where road energy input is large: heavy vehicles, fleets, off-road and defense.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div><b>Armstrong Kinetic Solutions</b> · Eufaula, Oklahoma · Durham, North Carolina</div>
+  <div class="url">www.armstrongkineticsolutions.com</div>
+  <div>U.S. Patent 12,409,695 B2 · Duke Energy Week 2026</div>
+</footer>
+</div>
+</div>
+</body>
+</html>

@@ -64,3 +64,20 @@ V2: configure single-corner rectifier at 0.047 m/s RMS suspension velocity,
 reproduce Zuo MMR ≈40 W/unit and >60% mechanical efficiency within ±25%.
 Pull the actual Li/Zuo 2013 numbers via web search and cite precisely
 (power level, device kinematics, test conditions) before running anything.
+
+## 2026-10-22 — Duke Energy Week poster
+
+**Goal:** 48×36 in landscape poster for the AKS booth at Duke Energy Week
+(`reports/poster/`). Not physics work; no model code touched.
+
+- Source material: AKS business card (logo mark extracted from the PDF),
+  website screenshot of the "push-down top" analogy and patented-drive figure
+  (both redrawn as inline SVG), photo of Avery and Larry with the first
+  machined frame. The live website could not be fetched from the sandbox
+  (proxy 403), so copy follows the screenshot and the slogan on the card.
+- Honesty norms applied on the poster: every number tagged Literature /
+  Predicted / Estimate; passenger-car harvest stated as "hundreds of W", kW
+  class reserved for heavy vehicles; "a sedan will not charge itself".
+- IP guardrail: only the granted-patent mechanism is described. No unfiled
+  concepts appear.
+- Render: `reports/poster/render.sh` (headless Chromium → PDF + PNG).
